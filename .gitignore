@@ -1,0 +1,5 @@
+# Project exclude paths
+/02-parsers/CMakeFiles/
+/cmake-build-debug/
+/cmake-build-release-system/
+/CMakeFiles/

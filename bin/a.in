@@ -1,0 +1,11 @@
+class Factorial {
+  public static void main () {
+    int param;
+    param = 3;
+    System.out.println(param);
+    int b;
+    b = param;
+    System.out.println(67);
+    return b;
+  }
+}
