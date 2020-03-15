@@ -1,0 +1,10 @@
+//
+// Created by timur on 16.03.2020.
+//
+
+#ifndef COMPILERS_02_PARSERS_TYPES_SIMPLETYPE_H_
+#define COMPILERS_02_PARSERS_TYPES_SIMPLETYPE_H_
+
+class SimpleType {};
+
+#endif // COMPILERS_02_PARSERS_TYPES_SIMPLETYPE_H_

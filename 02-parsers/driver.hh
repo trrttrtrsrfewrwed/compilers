@@ -25,6 +25,7 @@ class Driver {
     friend class Scanner;
     Scanner scanner;
     yy::parser parser;
+    Program* program;
  private:
     std::ifstream stream;
 

@@ -80,146 +80,144 @@
 %token <std::string> IDENTIFIER "identifier"
 %token <int> NUMBER "number"
 %nterm <int> binary_operator
-%nterm <int> expr
-%nterm <std::string> lvalue
+%nterm <Expression*> expr
+%nterm <Program*> unit
+%nterm <MainClass*> main_class
+%nterm <ClassDeclarationList*> class_declarations
+%nterm <ClassDeclaration*> class_declaration
+%nterm <StatementList*> statements
+%nterm <Statement*> statement
+%nterm <DeclarationList*> declarations
+%nterm <Declaration*> declaration
+%nterm <VariableDeclaration*> variable_declaration
+%nterm <MethodDeclaration*> method_declaration
+%nterm <Type*> type
+%nterm <FormalList*> formals
+%nterm <FormalList*> following_formals
+%nterm <SimpleType*> simple_type
+%nterm <ArrayType*> array_type
+%nterm <TypeIdentifier*> type_identifier
+%nterm <LocalVariableDeclaration*> local_variable_declaration
+%nterm <MethodInvokation*> method_invokation
+%nterm <ExpressionList*> following_exprs
+%nterm <Lvalue*> lvalue
+// %nterm <BinaryOperatior*> binary_operator
+
 
 %printer { yyo << $$; } <*>;
 
 %%
 %start unit;
-unit: main_class class_declarations {};
+unit: main_class class_declarations { $$ = new Program($1, $2); };
 
-main_class: "class" "identifier" "{" "psvm" "(" ")" "{" statements "}" "}" {};
+main_class: "class" "identifier" "{" "psvm" "(" ")" "{" statements "}" "}" { $$ = new MainClass($2, $8); };
 
 class_declarations:
-	%empty {}
-	| class_declaration {};
+	%empty { $$ = new ClassDeclarationList(); }
+	| class_declaration { $$ = new ClassDeclarationList($1); };
 
 statements:
-	%empty {}
-	| statements statement {};
+	%empty { $$ = new StatementList(); }
+	| statements statement { $1.AddStatement($2); $$ = $1; };
 
-class_declaration: "class" "identifier" "{" declarations "}" {} |
-		"class" "identifier" "extends" "identifier" "{" declarations "}" {};
+class_declaration: "class" "identifier" "{" declarations "}" { $$ = new ClassDeclaration($2, $4); } |
+		"class" "identifier" "extends" "identifier" "{" declarations "}" { $$ = new ClassDeclaration($2, $4, $6); };
 
 declarations:
-	%empty {}
-	| declarations declaration {};
+	%empty { $$ = new DeclarationList(); }
+	| declarations declaration { $1.AddDeclaration($2); $$ = $1; };
 
-declaration: variable_declaration {}
- 	| method_declaration {};
+declaration: variable_declaration { $$ = new Declaration($1); }
+ 	| method_declaration { $$ = new Declaration($1); };
 
-method_declaration: "public" type "identifier" "(" ")" "{" statements "}" {}
-	| "public" type "identifier" "(" formals ")" "{" statements "}" {};
+method_declaration: "public" type "identifier" "(" ")" "{" statements "}" { $$ = new MethodDeclaration($2, $3, $7); }
+	| "public" type "identifier" "(" formals ")" "{" statements "}" { $$ = new MethodDeclaration($2, $3, $5, $8); };
 
-variable_declaration: type "identifier" ";" {};
+variable_declaration: type "identifier" ";" { $$ = new VariableDeclaration($1, $2); };
 
-formals: type "identifier" following_formals {};
+formals: type "identifier" following_formals { $3.AddFormal($1, $2); $$ = $3; };
 
 following_formals:
-	%empty {}
-	| "," type "identifier" following_formals {};
+	%empty { $$ = new FormalList(); }
+	| "," type "identifier" following_formals { $4.AddFormal($2, $3); $$ = $4; };
 
 type:
-	simple_type {}
-	| array_type {};
+	simple_type { $$ = new Type($1); }
+	| array_type { $$ = new Type($1); };
 
 simple_type:
-	"int" {}
-	| "boolean" {}
-	| "void" {}
-	| type_identifier {};
+	"int" { $$ = new SimpleType("int"); }
+	| "boolean" { $$ = new SimpleType("boolean"); }
+	| "void" { $$ = new SimpleType("void"); }
+	| type_identifier { $$ = new SimpleType($1); };
 
 array_type:
-	simple_type "[" "]" {};
+	simple_type "[" "]" { $$ = new ArrayType($1); };
 
 type_identifier:
-	"identifier";
+	"identifier" { $$ = new TypeIdentifier($1); };
 
-statement: "assert" "(" expr ")" ";" {} |
-                local_variable_declaration {} |
-                "{" statements "}" {} |
-                "if"  "(" expr ")" statement {} |
-                "if"  "(" expr ")" statement "else" statement {} |
-                "while"  "(" expr ")" statement  {} |
-                "sout" "(" expr ")" ";"  { std::cout << $3 << "\n"; } |
-                lvalue "=" expr ";"  { driver.variables[$1] = $3; } |
-                "return" expr ";"  { driver.result = $2; }|
-                method_invocation ";" {};
+statement: "assert" "(" expr ")" ";" { $$ = new AssertStatement($3); } |
+                local_variable_declaration { $$ = new LocalVariableDeclarationStatement($1); } |
+                "{" statements "}" { $$ = new ScopeStatement($2); } |
+                "if"  "(" expr ")" statement { $$ = new IfStatement($3, $5); } |
+                "if"  "(" expr ")" statement "else" statement { $$ = new IfElseStatement($3, $5, $7); } |
+                "while"  "(" expr ")" statement  { $$ = new WhileStatement($3, $5); } |
+                "sout" "(" expr ")" ";"  { $$ = new SoutStatement($3); } |
+                lvalue "=" expr ";"  { $$ = new DefinitionStatement($1, $3); } |
+                "return" expr ";"  { $$ = new ReturnStatement($2); }|
+                method_invocation ";" { $$ = new MethodInvokationStatement($1); };
 
-local_variable_declaration: variable_declaration {};
+local_variable_declaration: variable_declaration { $$ = new LocalVariableDeclaration($1); };
 
-method_invocation: expr "." "identifier" "(" ")" {}
-		| expr "." "identifier" "(" expr following_exprs ")" {};
+method_invocation: expr "." "identifier" "(" ")" { $$ = new MethodInvokation($1, $3); }
+		| expr "." "identifier" "(" expr following_exprs ")" { $$ = new MethodInvokation($1, $3, $5, $6); };
 
 following_exprs:
-	%empty {}
-	| "," expr following_exprs {};
+	%empty { $$ = new ExpressionList(); }
+	| "," expr following_exprs { $3->AddExpression($2); $$ = $3; };
 
 
 lvalue:
-	"identifier" { $$ = $1; }
-	 | "identifier" "[" expr "]" {};
+	"identifier" { $$ = new SimpleLvalue($1); }
+	 | "identifier" "[" expr "]" { $$ = new ArrayLvalue($1, $3); };
 
 expr:	expr binary_operator expr  {
-		switch($2) {
-			case AndOp:
-				$$ = $1 && $3;
-				break;
-                        case OrOp:
-				$$ = $1 || $3;
-				break;
-                        case LessOp:
-                        	$$ = $1 < $3;
-                        	break;
-                        case GreaterOp:
-                        	$$ = $1 > $3;
-                        	break;
-                        case EqualOp:
-                        	$$ = $1 == $3;
-                        	break;
-                        case AddOp:
-                        	$$ = $1 + $3;
-                        	break;
-                        case SubtractOp:
-                        	$$ = $1 - $3;
-                        	break;
-                        case MultiplyOp:
-                        	$$ = $1 * $3;
-                        	break;
-                        case DivOp:
-                        	$$ = $1 / $3;
-                        	break;
-                        case ModOp:
-                        	$$ = $1 % $3;
-                        	break;
-		}
+		$$ = new BinaryExpression($1, $3, $2);
 }
-	| expr "[" expr "]"  {}
-	| expr "." "length" {}
-	| "new" simple_type "[" expr "]" {}
-	| "new" type_identifier "(" ")" {}
-	| "!" expr { $$ = !($2); }
-	| "(" expr ")" { $$ = $2; }
-	| "identifier"  { $$ = driver.variables[$1]; }
-	| "number"  { $$ = $1; }
-	| "this" {}
-	| "true" { $$ = 1; }
-	| "false" { $$ = 0; }
-	| method_invocation {};
+	| expr "[" expr "]"  {
+		$$ = new ArrayElementExpression($1, $3);
+	}
+	| expr "." "length" {
+		$$ = new ArrayLengthExpression($1);
+	}
+	| "new" simple_type "[" expr "]" {
+		$$ = new ArrayExpression($2, $4);
+	}
+	| "new" type_identifier "(" ")" {
+		$$ = new ObjectExpression($2);
+	}
+	| "!" expr { $$ = new NotExpression($2); }
+	| "(" expr ")" { $$ = new ParenthesesExpression($2); }
+	| "identifier"  { $$ = new IdentExpression($1); }
+	| "number"  { $$ = new NumberExpression($1); }
+	| "this" { $$ = new ThisExpression($1); }
+	| "true" { $$ = new BoolExpression($1); }
+	| "false" { $$ = new BoolExpression($1); }
+	| method_invocation { $$ = new MethodInvocationExpression($1); };
 
 
 binary_operator:
-	"&&"   { $$ = AndOp; }
-	|  "||"  { $$ = OrOp; }
-	|  "<"   { $$ = LessOp; }
-	| ">"   { $$ = GreaterOp; }
-	|  "=="   { $$ = EqualOp; }
-	| "+"   { $$ = AddOp; }
-	|  "-"  { $$ = SubtractOp; }
-	| "*"  { $$ = MultiplyOp; }
-	| "/"  { $$ = DivOp; }
-	| "%"  { $$ = ModOp; };
+	"&&"   { $$ = new BinaryOperator(AndOp); }
+	|  "||"  { $$ = new BinaryOperator(OrOp); }
+	|  "<"   { $$ = new BinaryOperator(LessOp); }
+	| ">"   { $$ = new BinaryOperator(GreaterOp); }
+	|  "=="   { $$ = new BinaryOperator(EqualOp); }
+	| "+"   { $$ = new BinaryOperator(AddOp); }
+	|  "-"  { $$ = new BinaryOperator(SubtractOp); }
+	| "*"  { $$ = new BinaryOperator(MultiplyOp); }
+	| "/"  { $$ = new BinaryOperator(DivOp); }
+	| "%"  { $$ = new BinaryOperator(ModOp); };
 
 %left "||";
 %left "&&";

@@ -1,0 +1,10 @@
+//
+// Created by timur on 16.03.2020.
+//
+
+#ifndef COMPILERS_02_PARSERS_TYPES_ARRAYTYPE_H_
+#define COMPILERS_02_PARSERS_TYPES_ARRAYTYPE_H_
+
+class ArrayType {};
+
+#endif // COMPILERS_02_PARSERS_TYPES_ARRAYTYPE_H_
