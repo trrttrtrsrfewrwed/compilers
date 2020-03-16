@@ -1,10 +1,12 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include "Statement.h"
+#include <expressions/Expression.h>
 
-#ifndef COMPILERS_02_PARSERS_STATEMENTS_WHILESTATEMENT_H_
-#define COMPILERS_02_PARSERS_STATEMENTS_WHILESTATEMENT_H_
+class WhileStatement: public Statement {
+public:
+  WhileStatement(Expression* query, Statement* while_statement);
 
-class WhileStatement {};
-
-#endif // COMPILERS_02_PARSERS_STATEMENTS_WHILESTATEMENT_H_
+private:
+  Expression* query_;
+  Statement* while_statement_;
+};

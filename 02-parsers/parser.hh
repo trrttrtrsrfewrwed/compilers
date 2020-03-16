@@ -32,7 +32,7 @@
 
 
 /**
- ** \file /home/timur/CLionProjects/CompilersCourse/02-parsers/parser.hh
+ ** \file /home/timur/CLionProjects/untitled9/02-parsers/parser.hh
  ** Define the yy::parser class.
  */
 
@@ -41,8 +41,8 @@
 // Undocumented macros, especially those whose name start with YY_,
 // are private implementation details.  Do not rely on them.
 
-#ifndef YY_YY_HOME_TIMUR_CLIONPROJECTS_COMPILERSCOURSE_02_PARSERS_PARSER_HH_INCLUDED
-# define YY_YY_HOME_TIMUR_CLIONPROJECTS_COMPILERSCOURSE_02_PARSERS_PARSER_HH_INCLUDED
+#ifndef YY_YY_HOME_TIMUR_CLIONPROJECTS_UNTITLED9_02_PARSERS_PARSER_HH_INCLUDED
+# define YY_YY_HOME_TIMUR_CLIONPROJECTS_UNTITLED9_02_PARSERS_PARSER_HH_INCLUDED
 // "%code requires" blocks.
 #line 9 "parser.y"
 
@@ -51,7 +51,9 @@
     class Scanner;
     class Driver;
 
-#line 55 "/home/timur/CLionProjects/CompilersCourse/02-parsers/parser.hh"
+    #include "forward_decl.h"
+
+#line 57 "/home/timur/CLionProjects/untitled9/02-parsers/parser.hh"
 
 # include <cassert>
 # include <cstdlib> // std::abort
@@ -185,7 +187,7 @@
 #endif
 
 namespace yy {
-#line 189 "/home/timur/CLionProjects/CompilersCourse/02-parsers/parser.hh"
+#line 191 "/home/timur/CLionProjects/untitled9/02-parsers/parser.hh"
 
 
 
@@ -389,14 +391,75 @@ namespace yy {
     /// An auxiliary type to compute the largest semantic type.
     union union_type
     {
-      // "number"
+      // array_type
+      char dummy1[sizeof (ArrayType*)];
+
       // binary_operator
+      char dummy2[sizeof (BinaryOperator*)];
+
+      // class_declaration
+      char dummy3[sizeof (ClassDeclaration*)];
+
+      // class_declarations
+      char dummy4[sizeof (ClassDeclarationList*)];
+
+      // declaration
+      char dummy5[sizeof (Declaration*)];
+
+      // declarations
+      char dummy6[sizeof (DeclarationList*)];
+
       // expr
-      char dummy1[sizeof (int)];
+      char dummy7[sizeof (Expression*)];
+
+      // following_exprs
+      char dummy8[sizeof (ExpressionList*)];
+
+      // formals
+      // following_formals
+      char dummy9[sizeof (FormalList*)];
+
+      // local_variable_declaration
+      char dummy10[sizeof (LocalVariableDeclaration*)];
+
+      // lvalue
+      char dummy11[sizeof (Lvalue*)];
+
+      // main_class
+      char dummy12[sizeof (MainClass*)];
+
+      // method_declaration
+      char dummy13[sizeof (MethodDeclaration*)];
+
+      // method_invocation
+      char dummy14[sizeof (MethodInvokation*)];
+
+      // unit
+      char dummy15[sizeof (Program*)];
+
+      // simple_type
+      char dummy16[sizeof (SimpleType*)];
+
+      // statement
+      char dummy17[sizeof (Statement*)];
+
+      // statements
+      char dummy18[sizeof (StatementList*)];
+
+      // type
+      char dummy19[sizeof (Type*)];
+
+      // type_identifier
+      char dummy20[sizeof (TypeIdentifier*)];
+
+      // variable_declaration
+      char dummy21[sizeof (VariableDeclaration*)];
+
+      // "number"
+      char dummy22[sizeof (int)];
 
       // "identifier"
-      // lvalue
-      char dummy2[sizeof (std::string)];
+      char dummy23[sizeof (std::string)];
     };
 
     /// The size of the largest semantic type.
@@ -537,6 +600,279 @@ namespace yy {
       {}
 #endif
 #if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, ArrayType*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const ArrayType*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, BinaryOperator*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const BinaryOperator*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, ClassDeclaration*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const ClassDeclaration*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, ClassDeclarationList*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const ClassDeclarationList*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, Declaration*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const Declaration*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, DeclarationList*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const DeclarationList*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, Expression*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const Expression*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, ExpressionList*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const ExpressionList*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, FormalList*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const FormalList*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, LocalVariableDeclaration*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const LocalVariableDeclaration*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, Lvalue*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const Lvalue*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, MainClass*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const MainClass*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, MethodDeclaration*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const MethodDeclaration*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, MethodInvokation*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const MethodInvokation*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, Program*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const Program*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, SimpleType*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const SimpleType*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, Statement*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const Statement*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, StatementList*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const StatementList*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, Type*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const Type*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, TypeIdentifier*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const TypeIdentifier*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, VariableDeclaration*&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const VariableDeclaration*& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
       basic_symbol (typename Base::kind_type t, int&& v, location_type&& l)
         : Base (t)
         , value (std::move (v))
@@ -585,14 +921,96 @@ namespace yy {
         // Type destructor.
 switch (yytype)
     {
+      case 60: // array_type
+        value.template destroy< ArrayType* > ();
+        break;
+
+      case 66: // binary_operator
+        value.template destroy< BinaryOperator* > ();
+        break;
+
+      case 49: // class_declaration
+        value.template destroy< ClassDeclaration* > ();
+        break;
+
+      case 48: // class_declarations
+        value.template destroy< ClassDeclarationList* > ();
+        break;
+
+      case 53: // declaration
+        value.template destroy< Declaration* > ();
+        break;
+
+      case 52: // declarations
+        value.template destroy< DeclarationList* > ();
+        break;
+
+      case 45: // expr
+        value.template destroy< Expression* > ();
+        break;
+
+      case 64: // following_exprs
+        value.template destroy< ExpressionList* > ();
+        break;
+
+      case 57: // formals
+      case 58: // following_formals
+        value.template destroy< FormalList* > ();
+        break;
+
+      case 62: // local_variable_declaration
+        value.template destroy< LocalVariableDeclaration* > ();
+        break;
+
+      case 65: // lvalue
+        value.template destroy< Lvalue* > ();
+        break;
+
+      case 47: // main_class
+        value.template destroy< MainClass* > ();
+        break;
+
+      case 55: // method_declaration
+        value.template destroy< MethodDeclaration* > ();
+        break;
+
+      case 63: // method_invocation
+        value.template destroy< MethodInvokation* > ();
+        break;
+
+      case 46: // unit
+        value.template destroy< Program* > ();
+        break;
+
+      case 59: // simple_type
+        value.template destroy< SimpleType* > ();
+        break;
+
+      case 51: // statement
+        value.template destroy< Statement* > ();
+        break;
+
+      case 50: // statements
+        value.template destroy< StatementList* > ();
+        break;
+
+      case 56: // type
+        value.template destroy< Type* > ();
+        break;
+
+      case 61: // type_identifier
+        value.template destroy< TypeIdentifier* > ();
+        break;
+
+      case 54: // variable_declaration
+        value.template destroy< VariableDeclaration* > ();
+        break;
+
       case 40: // "number"
-      case 45: // binary_operator
-      case 46: // expr
         value.template destroy< int > ();
         break;
 
       case 39: // "identifier"
-      case 47: // lvalue
         value.template destroy< std::string > ();
         break;
 
@@ -1635,7 +2053,7 @@ switch (yytype)
     enum
     {
       yyeof_ = 0,
-      yylast_ = 502,     ///< Last index in yytable_.
+      yylast_ = 503,     ///< Last index in yytable_.
       yynnts_ = 23,  ///< Number of nonterminal symbols.
       yyfinal_ = 5, ///< Termination state number.
       yyntokens_ = 44  ///< Number of tokens.
@@ -1708,14 +2126,96 @@ switch (yytype)
   {
     switch (this->type_get ())
     {
+      case 60: // array_type
+        value.move< ArrayType* > (std::move (that.value));
+        break;
+
+      case 66: // binary_operator
+        value.move< BinaryOperator* > (std::move (that.value));
+        break;
+
+      case 49: // class_declaration
+        value.move< ClassDeclaration* > (std::move (that.value));
+        break;
+
+      case 48: // class_declarations
+        value.move< ClassDeclarationList* > (std::move (that.value));
+        break;
+
+      case 53: // declaration
+        value.move< Declaration* > (std::move (that.value));
+        break;
+
+      case 52: // declarations
+        value.move< DeclarationList* > (std::move (that.value));
+        break;
+
+      case 45: // expr
+        value.move< Expression* > (std::move (that.value));
+        break;
+
+      case 64: // following_exprs
+        value.move< ExpressionList* > (std::move (that.value));
+        break;
+
+      case 57: // formals
+      case 58: // following_formals
+        value.move< FormalList* > (std::move (that.value));
+        break;
+
+      case 62: // local_variable_declaration
+        value.move< LocalVariableDeclaration* > (std::move (that.value));
+        break;
+
+      case 65: // lvalue
+        value.move< Lvalue* > (std::move (that.value));
+        break;
+
+      case 47: // main_class
+        value.move< MainClass* > (std::move (that.value));
+        break;
+
+      case 55: // method_declaration
+        value.move< MethodDeclaration* > (std::move (that.value));
+        break;
+
+      case 63: // method_invocation
+        value.move< MethodInvokation* > (std::move (that.value));
+        break;
+
+      case 46: // unit
+        value.move< Program* > (std::move (that.value));
+        break;
+
+      case 59: // simple_type
+        value.move< SimpleType* > (std::move (that.value));
+        break;
+
+      case 51: // statement
+        value.move< Statement* > (std::move (that.value));
+        break;
+
+      case 50: // statements
+        value.move< StatementList* > (std::move (that.value));
+        break;
+
+      case 56: // type
+        value.move< Type* > (std::move (that.value));
+        break;
+
+      case 61: // type_identifier
+        value.move< TypeIdentifier* > (std::move (that.value));
+        break;
+
+      case 54: // variable_declaration
+        value.move< VariableDeclaration* > (std::move (that.value));
+        break;
+
       case 40: // "number"
-      case 45: // binary_operator
-      case 46: // expr
         value.move< int > (std::move (that.value));
         break;
 
       case 39: // "identifier"
-      case 47: // lvalue
         value.move< std::string > (std::move (that.value));
         break;
 
@@ -1734,14 +2234,96 @@ switch (yytype)
   {
     switch (this->type_get ())
     {
+      case 60: // array_type
+        value.copy< ArrayType* > (YY_MOVE (that.value));
+        break;
+
+      case 66: // binary_operator
+        value.copy< BinaryOperator* > (YY_MOVE (that.value));
+        break;
+
+      case 49: // class_declaration
+        value.copy< ClassDeclaration* > (YY_MOVE (that.value));
+        break;
+
+      case 48: // class_declarations
+        value.copy< ClassDeclarationList* > (YY_MOVE (that.value));
+        break;
+
+      case 53: // declaration
+        value.copy< Declaration* > (YY_MOVE (that.value));
+        break;
+
+      case 52: // declarations
+        value.copy< DeclarationList* > (YY_MOVE (that.value));
+        break;
+
+      case 45: // expr
+        value.copy< Expression* > (YY_MOVE (that.value));
+        break;
+
+      case 64: // following_exprs
+        value.copy< ExpressionList* > (YY_MOVE (that.value));
+        break;
+
+      case 57: // formals
+      case 58: // following_formals
+        value.copy< FormalList* > (YY_MOVE (that.value));
+        break;
+
+      case 62: // local_variable_declaration
+        value.copy< LocalVariableDeclaration* > (YY_MOVE (that.value));
+        break;
+
+      case 65: // lvalue
+        value.copy< Lvalue* > (YY_MOVE (that.value));
+        break;
+
+      case 47: // main_class
+        value.copy< MainClass* > (YY_MOVE (that.value));
+        break;
+
+      case 55: // method_declaration
+        value.copy< MethodDeclaration* > (YY_MOVE (that.value));
+        break;
+
+      case 63: // method_invocation
+        value.copy< MethodInvokation* > (YY_MOVE (that.value));
+        break;
+
+      case 46: // unit
+        value.copy< Program* > (YY_MOVE (that.value));
+        break;
+
+      case 59: // simple_type
+        value.copy< SimpleType* > (YY_MOVE (that.value));
+        break;
+
+      case 51: // statement
+        value.copy< Statement* > (YY_MOVE (that.value));
+        break;
+
+      case 50: // statements
+        value.copy< StatementList* > (YY_MOVE (that.value));
+        break;
+
+      case 56: // type
+        value.copy< Type* > (YY_MOVE (that.value));
+        break;
+
+      case 61: // type_identifier
+        value.copy< TypeIdentifier* > (YY_MOVE (that.value));
+        break;
+
+      case 54: // variable_declaration
+        value.copy< VariableDeclaration* > (YY_MOVE (that.value));
+        break;
+
       case 40: // "number"
-      case 45: // binary_operator
-      case 46: // expr
         value.copy< int > (YY_MOVE (that.value));
         break;
 
       case 39: // "identifier"
-      case 47: // lvalue
         value.copy< std::string > (YY_MOVE (that.value));
         break;
 
@@ -1767,14 +2349,96 @@ switch (yytype)
     super_type::move (s);
     switch (this->type_get ())
     {
+      case 60: // array_type
+        value.move< ArrayType* > (YY_MOVE (s.value));
+        break;
+
+      case 66: // binary_operator
+        value.move< BinaryOperator* > (YY_MOVE (s.value));
+        break;
+
+      case 49: // class_declaration
+        value.move< ClassDeclaration* > (YY_MOVE (s.value));
+        break;
+
+      case 48: // class_declarations
+        value.move< ClassDeclarationList* > (YY_MOVE (s.value));
+        break;
+
+      case 53: // declaration
+        value.move< Declaration* > (YY_MOVE (s.value));
+        break;
+
+      case 52: // declarations
+        value.move< DeclarationList* > (YY_MOVE (s.value));
+        break;
+
+      case 45: // expr
+        value.move< Expression* > (YY_MOVE (s.value));
+        break;
+
+      case 64: // following_exprs
+        value.move< ExpressionList* > (YY_MOVE (s.value));
+        break;
+
+      case 57: // formals
+      case 58: // following_formals
+        value.move< FormalList* > (YY_MOVE (s.value));
+        break;
+
+      case 62: // local_variable_declaration
+        value.move< LocalVariableDeclaration* > (YY_MOVE (s.value));
+        break;
+
+      case 65: // lvalue
+        value.move< Lvalue* > (YY_MOVE (s.value));
+        break;
+
+      case 47: // main_class
+        value.move< MainClass* > (YY_MOVE (s.value));
+        break;
+
+      case 55: // method_declaration
+        value.move< MethodDeclaration* > (YY_MOVE (s.value));
+        break;
+
+      case 63: // method_invocation
+        value.move< MethodInvokation* > (YY_MOVE (s.value));
+        break;
+
+      case 46: // unit
+        value.move< Program* > (YY_MOVE (s.value));
+        break;
+
+      case 59: // simple_type
+        value.move< SimpleType* > (YY_MOVE (s.value));
+        break;
+
+      case 51: // statement
+        value.move< Statement* > (YY_MOVE (s.value));
+        break;
+
+      case 50: // statements
+        value.move< StatementList* > (YY_MOVE (s.value));
+        break;
+
+      case 56: // type
+        value.move< Type* > (YY_MOVE (s.value));
+        break;
+
+      case 61: // type_identifier
+        value.move< TypeIdentifier* > (YY_MOVE (s.value));
+        break;
+
+      case 54: // variable_declaration
+        value.move< VariableDeclaration* > (YY_MOVE (s.value));
+        break;
+
       case 40: // "number"
-      case 45: // binary_operator
-      case 46: // expr
         value.move< int > (YY_MOVE (s.value));
         break;
 
       case 39: // "identifier"
-      case 47: // lvalue
         value.move< std::string > (YY_MOVE (s.value));
         break;
 
@@ -1833,10 +2497,10 @@ switch (yytype)
   }
 
 } // yy
-#line 1837 "/home/timur/CLionProjects/CompilersCourse/02-parsers/parser.hh"
+#line 2501 "/home/timur/CLionProjects/untitled9/02-parsers/parser.hh"
 
 
 
 
 
-#endif // !YY_YY_HOME_TIMUR_CLIONPROJECTS_COMPILERSCOURSE_02_PARSERS_PARSER_HH_INCLUDED
+#endif // !YY_YY_HOME_TIMUR_CLIONPROJECTS_UNTITLED9_02_PARSERS_PARSER_HH_INCLUDED

@@ -7,7 +7,7 @@ BoolExpression::BoolExpression(const std::string& value) {
   } else if (value == "false") {
     value_ = false;
   } else {
-    std::cerr << "exception in bool!" << "\n";
+    std::cerr << "exception in BoolExpression!: " << value << "\n";
   }
 }
 

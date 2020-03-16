@@ -11,6 +11,8 @@
     #include "BinaryOps.h"
     class Scanner;
     class Driver;
+
+    #include "forward_decl.h"
 }
 
 // %param { Driver &drv }
@@ -21,6 +23,8 @@
 %code {
     #include "driver.hh"
     #include "location.hh"
+
+    #include "elements.h"
 
 
     static yy::parser::symbol_type yylex(Scanner &scanner, Driver& driver) {
@@ -79,7 +83,6 @@
 
 %token <std::string> IDENTIFIER "identifier"
 %token <int> NUMBER "number"
-%nterm <int> binary_operator
 %nterm <Expression*> expr
 %nterm <Program*> unit
 %nterm <MainClass*> main_class
@@ -98,10 +101,10 @@
 %nterm <ArrayType*> array_type
 %nterm <TypeIdentifier*> type_identifier
 %nterm <LocalVariableDeclaration*> local_variable_declaration
-%nterm <MethodInvokation*> method_invokation
+%nterm <MethodInvokation*> method_invocation
 %nterm <ExpressionList*> following_exprs
 %nterm <Lvalue*> lvalue
-// %nterm <BinaryOperatior*> binary_operator
+%nterm <BinaryOperator*> binary_operator
 
 
 %printer { yyo << $$; } <*>;
@@ -118,14 +121,13 @@ class_declarations:
 
 statements:
 	%empty { $$ = new StatementList(); }
-	| statements statement { $1.AddStatement($2); $$ = $1; };
+	| statements statement { $1->AddStatement($2); $$ = $1; };
 
 class_declaration: "class" "identifier" "{" declarations "}" { $$ = new ClassDeclaration($2, $4); } |
 		"class" "identifier" "extends" "identifier" "{" declarations "}" { $$ = new ClassDeclaration($2, $4, $6); };
 
-declarations:
-	%empty { $$ = new DeclarationList(); }
-	| declarations declaration { $1.AddDeclaration($2); $$ = $1; };
+declarations:	%empty { $$ = new DeclarationList(); }
+	| declarations declaration { $1->AddDeclaration($2); $$ = $1; };
 
 declaration: variable_declaration { $$ = new Declaration($1); }
  	| method_declaration { $$ = new Declaration($1); };
@@ -135,11 +137,11 @@ method_declaration: "public" type "identifier" "(" ")" "{" statements "}" { $$ =
 
 variable_declaration: type "identifier" ";" { $$ = new VariableDeclaration($1, $2); };
 
-formals: type "identifier" following_formals { $3.AddFormal($1, $2); $$ = $3; };
+formals: type "identifier" following_formals { $3->AddFormal($1, $2); $$ = $3; };
 
 following_formals:
 	%empty { $$ = new FormalList(); }
-	| "," type "identifier" following_formals { $4.AddFormal($2, $3); $$ = $4; };
+	| "," type "identifier" following_formals { $4->AddFormal($2, $3); $$ = $4; };
 
 type:
 	simple_type { $$ = new Type($1); }
@@ -201,10 +203,10 @@ expr:	expr binary_operator expr  {
 	| "(" expr ")" { $$ = new ParenthesesExpression($2); }
 	| "identifier"  { $$ = new IdentExpression($1); }
 	| "number"  { $$ = new NumberExpression($1); }
-	| "this" { $$ = new ThisExpression($1); }
-	| "true" { $$ = new BoolExpression($1); }
-	| "false" { $$ = new BoolExpression($1); }
-	| method_invocation { $$ = new MethodInvocationExpression($1); };
+	| "this" { $$ = new ThisExpression("this"); }
+	| "true" { $$ = new BoolExpression("true"); }
+	| "false" { $$ = new BoolExpression("false"); }
+	| method_invocation { $$ = new MethodInvokationExpression($1); };
 
 
 binary_operator:

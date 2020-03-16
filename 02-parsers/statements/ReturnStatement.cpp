@@ -1,5 +1,4 @@
-//
-// Created by timur on 16.03.2020.
-//
-
 #include "ReturnStatement.h"
+
+ReturnStatement::ReturnStatement(Expression *return_expr)
+    : return_expr_(return_expr) {}

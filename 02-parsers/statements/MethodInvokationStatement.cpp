@@ -1,5 +1,5 @@
-//
-// Created by timur on 16.03.2020.
-//
-
 #include "MethodInvokationStatement.h"
+
+MethodInvokationStatement::MethodInvokationStatement(
+    MethodInvokation *method_invokation)
+    : method_invokation_(method_invokation) {}

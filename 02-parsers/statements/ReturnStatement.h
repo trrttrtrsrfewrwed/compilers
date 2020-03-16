@@ -1,10 +1,12 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include "Statement.h"
+#include <expressions/Expression.h>
 
-#ifndef COMPILERS_02_PARSERS_STATEMENTS_RETURNSTATEMENT_H_
-#define COMPILERS_02_PARSERS_STATEMENTS_RETURNSTATEMENT_H_
+class ReturnStatement: public Statement {
+public:
+  ReturnStatement(Expression* return_expr);
 
-class ReturnStatement {};
+private:
+  Expression* return_expr_;
+};
 
-#endif // COMPILERS_02_PARSERS_STATEMENTS_RETURNSTATEMENT_H_

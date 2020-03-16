@@ -1,10 +1,10 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include "SimpleType.h"
+class ArrayType {
+public:
+  ArrayType(SimpleType* element_type);
 
-#ifndef COMPILERS_02_PARSERS_TYPES_ARRAYTYPE_H_
-#define COMPILERS_02_PARSERS_TYPES_ARRAYTYPE_H_
-
-class ArrayType {};
-
-#endif // COMPILERS_02_PARSERS_TYPES_ARRAYTYPE_H_
+  std::string GetType();
+private:
+  SimpleType* element_type_;
+};

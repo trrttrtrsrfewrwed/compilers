@@ -1,10 +1,12 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
 
-#ifndef COMPILERS_02_PARSERS_LVALUES_SIMPLELVALUE_H_
-#define COMPILERS_02_PARSERS_LVALUES_SIMPLELVALUE_H_
+#include "Lvalue.h"
+#include <string>
+class SimpleLvalue: public Lvalue {
+public:
+  SimpleLvalue(std::string id);
 
-class SimpleLvalue {};
+private:
+  std::string id_;
+};
 
-#endif // COMPILERS_02_PARSERS_LVALUES_SIMPLELVALUE_H_

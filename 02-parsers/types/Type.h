@@ -1,10 +1,13 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
 
-#ifndef COMPILERS_02_PARSERS_TYPES_TYPE_H_
-#define COMPILERS_02_PARSERS_TYPES_TYPE_H_
+#include "ArrayType.h"
+#include "SimpleType.h"
+class Type {
+public:
+  Type(SimpleType* type);
+  Type(ArrayType* type);
 
-class Type {};
-
-#endif // COMPILERS_02_PARSERS_TYPES_TYPE_H_
+private:
+  std::string type_;
+  bool is_array_;
+};

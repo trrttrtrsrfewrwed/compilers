@@ -1,10 +1,13 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include "CommonDeclaration.h"
+#include "types/Type.h"
+#include <string>
 
-#ifndef COMPILERS_02_PARSERS_DECLARATIONS_VARIABLEDECLARATION_H_
-#define COMPILERS_02_PARSERS_DECLARATIONS_VARIABLEDECLARATION_H_
+class VariableDeclaration : public CommonDeclaration {
+public:
+  VariableDeclaration(Type *type, std::string variable_name);
 
-class VariableDeclaration {};
-
-#endif // COMPILERS_02_PARSERS_DECLARATIONS_VARIABLEDECLARATION_H_
+private:
+  Type *type_;
+  std::string variable_name_;
+};

@@ -1,5 +1,5 @@
-//
-// Created by timur on 16.03.2020.
-//
-
 #include "Program.h"
+
+Program::Program(MainClass *main_class,
+                 ClassDeclarationList *class_declarations)
+    : main_class_(main_class), class_declarations_(class_declarations) {}

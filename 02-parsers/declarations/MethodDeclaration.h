@@ -1,10 +1,18 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include "CommonDeclaration.h"
+#include "formals/FormalList.h"
+#include "statements/StatementList.h"
+#include "types/Type.h"
+#include <string>
 
-#ifndef COMPILERS_02_PARSERS_DECLARATIONS_METHODDECLARATION_H_
-#define COMPILERS_02_PARSERS_DECLARATIONS_METHODDECLARATION_H_
+class MethodDeclaration: public CommonDeclaration {
+public:
+  MethodDeclaration(Type* return_type, std::string method_name, StatementList* method_body);
+  MethodDeclaration(Type* return_type, std::string method_name, FormalList* args, StatementList* method_body);
+private:
+  Type* return_type_;
+  std::string method_name_;
+  StatementList* method_body_;
+  FormalList* args_;
+};
 
-class MethodDeclaration {};
-
-#endif // COMPILERS_02_PARSERS_DECLARATIONS_METHODDECLARATION_H_

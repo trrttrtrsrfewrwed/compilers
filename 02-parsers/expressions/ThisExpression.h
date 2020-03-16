@@ -6,5 +6,4 @@ class ThisExpression: public Expression {
 public:
   ThisExpression(std::string value);
   ExprInfo eval() const override;
-  
 };

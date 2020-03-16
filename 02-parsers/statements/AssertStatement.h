@@ -1,10 +1,12 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include "Statement.h"
+#include <expressions/Expression.h>
 
-#ifndef COMPILERS_02_PARSERS_STATEMENTS_ASSERTSTATEMENT_H_
-#define COMPILERS_02_PARSERS_STATEMENTS_ASSERTSTATEMENT_H_
+class AssertStatement: public Statement {
+public:
+  AssertStatement(Expression* expr);
 
-class AssertStatement {};
+private:
+  Expression* expr_;
+};
 
-#endif // COMPILERS_02_PARSERS_STATEMENTS_ASSERTSTATEMENT_H_

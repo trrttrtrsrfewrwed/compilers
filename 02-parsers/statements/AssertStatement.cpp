@@ -1,5 +1,3 @@
-//
-// Created by timur on 16.03.2020.
-//
-
 #include "AssertStatement.h"
+
+AssertStatement::AssertStatement(Expression *expr): expr_(expr) {}

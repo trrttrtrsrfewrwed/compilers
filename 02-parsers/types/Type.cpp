@@ -1,5 +1,5 @@
-//
-// Created by timur on 16.03.2020.
-//
-
 #include "Type.h"
+
+Type::Type(SimpleType *type): type_(type->GetType()), is_array_(false) {}
+
+Type::Type(ArrayType *type): type_(type->GetType()), is_array_(true) {}

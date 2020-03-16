@@ -1,5 +1,4 @@
-//
-// Created by timur on 16.03.2020.
-//
-
 #include "ArrayLvalue.h"
+
+ArrayLvalue::ArrayLvalue(std::string id, Expression *idx)
+    : id_(std::move(id)), idx_(idx) {}

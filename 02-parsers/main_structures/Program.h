@@ -1,10 +1,12 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
 
-#ifndef COMPILERS_02_PARSERS_PROGRAM_H_
-#define COMPILERS_02_PARSERS_PROGRAM_H_
+#include <declarations/ClassDeclarationList.h>
+#include "MainClass.h"
+class Program {
+public:
+  Program(MainClass* main_class, ClassDeclarationList* class_declarations);
 
-class Program {};
-
-#endif // COMPILERS_02_PARSERS_PROGRAM_H_
+private:
+  MainClass* main_class_;
+  ClassDeclarationList* class_declarations_;
+};

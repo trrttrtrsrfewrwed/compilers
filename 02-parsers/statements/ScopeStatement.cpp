@@ -1,5 +1,4 @@
-//
-// Created by timur on 16.03.2020.
-//
-
 #include "ScopeStatement.h"
+
+ScopeStatement::ScopeStatement(StatementList *statements)
+    : statements_(statements) {}

@@ -1,5 +1,7 @@
-//
-// Created by timur on 16.03.2020.
-//
-
 #include "ClassDeclarationList.h"
+
+ClassDeclarationList::ClassDeclarationList(){};
+
+ClassDeclarationList::ClassDeclarationList(ClassDeclaration *decl) {
+  declarations_.push_back(decl);
+}

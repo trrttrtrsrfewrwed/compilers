@@ -1,10 +1,11 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include "Statement.h"
+#include "StatementList.h"
 
-#ifndef COMPILERS_02_PARSERS_STATEMENTS_SCOPESTATEMENT_H_
-#define COMPILERS_02_PARSERS_STATEMENTS_SCOPESTATEMENT_H_
+class ScopeStatement: public Statement {
+public:
+  ScopeStatement(StatementList* statements);
 
-class ScopeStatement {};
-
-#endif // COMPILERS_02_PARSERS_STATEMENTS_SCOPESTATEMENT_H_
+private:
+  StatementList* statements_;
+};

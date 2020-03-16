@@ -1,5 +1,4 @@
-//
-// Created by timur on 16.03.2020.
-//
-
 #include "DefinitionStatement.h"
+
+DefinitionStatement::DefinitionStatement(Lvalue *lvalue, Expression *expr)
+    : lvalue_(lvalue), expr_(expr) {}

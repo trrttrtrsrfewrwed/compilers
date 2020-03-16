@@ -1,10 +1,13 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include <string>
+#include "TypeIdentifier.h"
 
-#ifndef COMPILERS_02_PARSERS_TYPES_SIMPLETYPE_H_
-#define COMPILERS_02_PARSERS_TYPES_SIMPLETYPE_H_
+class SimpleType {
+public:
+  SimpleType(std::string type);
+  SimpleType(TypeIdentifier* type_id);
 
-class SimpleType {};
-
-#endif // COMPILERS_02_PARSERS_TYPES_SIMPLETYPE_H_
+  std::string GetType();
+private:
+  std::string type_;
+};

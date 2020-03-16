@@ -31,12 +31,12 @@
 // version 2.2 of Bison.
 
 /**
- ** \file /home/timur/CLionProjects/CompilersCourse/02-parsers/location.hh
+ ** \file /home/timur/CLionProjects/untitled9/02-parsers/location.hh
  ** Define the yy::location class.
  */
 
-#ifndef YY_YY_HOME_TIMUR_CLIONPROJECTS_COMPILERSCOURSE_02_PARSERS_LOCATION_HH_INCLUDED
-# define YY_YY_HOME_TIMUR_CLIONPROJECTS_COMPILERSCOURSE_02_PARSERS_LOCATION_HH_INCLUDED
+#ifndef YY_YY_HOME_TIMUR_CLIONPROJECTS_UNTITLED9_02_PARSERS_LOCATION_HH_INCLUDED
+# define YY_YY_HOME_TIMUR_CLIONPROJECTS_UNTITLED9_02_PARSERS_LOCATION_HH_INCLUDED
 
 # include <iostream>
 # include <string>
@@ -54,7 +54,7 @@
 # endif
 
 namespace yy {
-#line 58 "/home/timur/CLionProjects/CompilersCourse/02-parsers/location.hh"
+#line 58 "/home/timur/CLionProjects/untitled9/02-parsers/location.hh"
 
   /// A point in a source file.
   class position
@@ -327,6 +327,6 @@ namespace yy {
   }
 
 } // yy
-#line 331 "/home/timur/CLionProjects/CompilersCourse/02-parsers/location.hh"
+#line 331 "/home/timur/CLionProjects/untitled9/02-parsers/location.hh"
 
-#endif // !YY_YY_HOME_TIMUR_CLIONPROJECTS_COMPILERSCOURSE_02_PARSERS_LOCATION_HH_INCLUDED
+#endif // !YY_YY_HOME_TIMUR_CLIONPROJECTS_UNTITLED9_02_PARSERS_LOCATION_HH_INCLUDED

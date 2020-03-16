@@ -1,5 +1,5 @@
-//
-// Created by timur on 16.03.2020.
-//
-
 #include "Declaration.h"
+
+Declaration::Declaration(VariableDeclaration *var_decl): decl_(var_decl) {}
+
+Declaration::Declaration(MethodDeclaration *method_decl): decl_(method_decl) {}

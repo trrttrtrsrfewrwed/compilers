@@ -1,10 +1,11 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include "Statement.h"
+#include <declarations/LocalVariableDeclaration.h>
 
-#ifndef COMPILERS_02_PARSERS_STATEMENTS_LOCALVARIABLEDECLARATIONSTATEMENT_H_
-#define COMPILERS_02_PARSERS_STATEMENTS_LOCALVARIABLEDECLARATIONSTATEMENT_H_
+class LocalVariableDeclarationStatement: public Statement {
+public:
+  LocalVariableDeclarationStatement(LocalVariableDeclaration* lv_decl);
 
-class LocalVariableDeclarationStatement {};
-
-#endif // COMPILERS_02_PARSERS_STATEMENTS_LOCALVARIABLEDECLARATIONSTATEMENT_H_
+private:
+  LocalVariableDeclaration* lv_decl_;
+};

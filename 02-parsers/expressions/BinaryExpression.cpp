@@ -1,4 +1,5 @@
 #include "BinaryExpression.h"
+#include <iostream>
 
 BinaryExpression::BinaryExpression(Expression *e1, Expression *e2,
                                    BinaryOperator *op):
@@ -28,5 +29,8 @@ ExprInfo BinaryExpression::eval() const {
     return first->eval() / second->eval();
   case ModOp:
     return first->eval() % second->eval();
+  default:
+    std::cerr << "Exception in BinaryExpression::eval()" << "\n";
+    return {};
   }
 }

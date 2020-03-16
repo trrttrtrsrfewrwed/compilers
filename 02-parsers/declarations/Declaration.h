@@ -1,10 +1,12 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
 
-#ifndef COMPILERS_02_PARSERS_DECLARATIONS_DECLARATION_H_
-#define COMPILERS_02_PARSERS_DECLARATIONS_DECLARATION_H_
+#include "MethodDeclaration.h"
+#include "VariableDeclaration.h"
+class Declaration {
+public:
+  Declaration(VariableDeclaration* var_decl);
+  Declaration(MethodDeclaration* method_decl);
 
-class Declaration {};
-
-#endif // COMPILERS_02_PARSERS_DECLARATIONS_DECLARATION_H_
+private:
+  CommonDeclaration* decl_;
+};

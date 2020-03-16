@@ -1,10 +1,12 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include "Statement.h"
+#include <expressions/Expression.h>
 
-#ifndef COMPILERS_02_PARSERS_STATEMENTS_IFSTATEMENT_H_
-#define COMPILERS_02_PARSERS_STATEMENTS_IFSTATEMENT_H_
+class IfStatement: public Statement {
+public:
+  IfStatement(Expression* query, Statement* if_statement);
 
-class IfStatement {};
-
-#endif // COMPILERS_02_PARSERS_STATEMENTS_IFSTATEMENT_H_
+private:
+  Expression* query_;
+  Statement* if_statement_;
+};

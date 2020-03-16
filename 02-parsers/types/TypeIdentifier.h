@@ -1,10 +1,10 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include <string>
 
-#ifndef COMPILERS_02_PARSERS_TYPES_TYPEIDENTIFIER_H_
-#define COMPILERS_02_PARSERS_TYPES_TYPEIDENTIFIER_H_
-
-class TypeIdentifier {};
-
-#endif // COMPILERS_02_PARSERS_TYPES_TYPEIDENTIFIER_H_
+class TypeIdentifier {
+public:
+  TypeIdentifier(std::string type_name);
+  std::string GetTypeName();
+private:
+  std::string type_name_;
+};

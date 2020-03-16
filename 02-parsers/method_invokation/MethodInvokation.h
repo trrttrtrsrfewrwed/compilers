@@ -1,10 +1,15 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
 
-#ifndef COMPILERS_02_PARSERS_METHODINVOKATION_H_
-#define COMPILERS_02_PARSERS_METHODINVOKATION_H_
-
-class MethodInvokation {};
-
-#endif // COMPILERS_02_PARSERS_METHODINVOKATION_H_
+#include <expressions/Expression.h>
+#include <expressions/ExpressionList.h>
+#include <string>
+class MethodInvokation {
+public:
+  MethodInvokation(Expression *obj, std::string func_name);
+  MethodInvokation(Expression *obj, std::string func_name,
+                   Expression *first_arg, ExpressionList *following_args);
+private:
+  Expression* obj_;
+  std::string func_name_;
+  ExpressionList* args_;
+};

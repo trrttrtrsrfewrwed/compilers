@@ -1,10 +1,11 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include "Statement.h"
+#include <expressions/Expression.h>
 
-#ifndef COMPILERS_02_PARSERS_STATEMENTS_SOUTSTATEMENT_H_
-#define COMPILERS_02_PARSERS_STATEMENTS_SOUTSTATEMENT_H_
+class SoutStatement: public Statement {
+public:
+  SoutStatement(Expression* expr);
 
-class SoutStatement {};
-
-#endif // COMPILERS_02_PARSERS_STATEMENTS_SOUTSTATEMENT_H_
+private:
+  Expression* expr_;
+};

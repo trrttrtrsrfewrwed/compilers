@@ -1,5 +1,3 @@
-//
-// Created by timur on 16.03.2020.
-//
-
 #include "SoutStatement.h"
+
+SoutStatement::SoutStatement(Expression *expr) : expr_(expr) {}

@@ -1,10 +1,13 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
 
-#ifndef COMPILERS_02_PARSERS_LVALUES_ARRAYLVALUE_H_
-#define COMPILERS_02_PARSERS_LVALUES_ARRAYLVALUE_H_
+#include "Lvalue.h"
+#include <expressions/Expression.h>
+#include <string>
+class ArrayLvalue: public Lvalue {
+public:
+  ArrayLvalue(std::string id, Expression* idx);
 
-class ArrayLvalue {};
-
-#endif // COMPILERS_02_PARSERS_LVALUES_ARRAYLVALUE_H_
+private:
+  std::string id_;
+  Expression* idx_;
+};

@@ -1,5 +1,7 @@
-//
-// Created by timur on 16.03.2020.
-//
-
 #include "ExpressionList.h"
+
+ExpressionList::ExpressionList() {}
+
+void ExpressionList::AddExpression(Expression *expr) {
+  expressions_.push_front(expr);
+}

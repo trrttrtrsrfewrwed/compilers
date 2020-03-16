@@ -1,10 +1,14 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include "types/Type.h"
+#include <string>
+#include <deque>
 
-#ifndef COMPILERS_02_PARSERS_FORMALS_FORMALLIST_H_
-#define COMPILERS_02_PARSERS_FORMALS_FORMALLIST_H_
+class FormalList {
+public:
+  FormalList();
+  void AddFormal(Type* arg_type, std::string arg_name);
 
-class FormalList {};
+private:
+  std::deque<std::pair<Type*, std::string>> args_;
+};
 
-#endif // COMPILERS_02_PARSERS_FORMALS_FORMALLIST_H_

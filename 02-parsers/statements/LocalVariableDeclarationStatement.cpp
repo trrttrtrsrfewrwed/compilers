@@ -1,5 +1,4 @@
-//
-// Created by timur on 16.03.2020.
-//
-
 #include "LocalVariableDeclarationStatement.h"
+
+LocalVariableDeclarationStatement::LocalVariableDeclarationStatement(
+    LocalVariableDeclaration *lv_decl): lv_decl_(lv_decl) {}

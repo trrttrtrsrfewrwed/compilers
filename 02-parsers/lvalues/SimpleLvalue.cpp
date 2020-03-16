@@ -1,5 +1,3 @@
-//
-// Created by timur on 16.03.2020.
-//
-
 #include "SimpleLvalue.h"
+
+SimpleLvalue::SimpleLvalue(std::string id): id_(std::move(id)) {}

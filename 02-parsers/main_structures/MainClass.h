@@ -1,10 +1,12 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include "string"
+#include <statements/StatementList.h>
 
-#ifndef COMPILERS_02_PARSERS_MAINCLASS_H_
-#define COMPILERS_02_PARSERS_MAINCLASS_H_
+class MainClass {
+public:
+  MainClass(std::string main_class_name, StatementList* statements);
 
-class MainClass {};
-
-#endif // COMPILERS_02_PARSERS_MAINCLASS_H_
+private:
+  std::string main_class_name_;
+  StatementList* statements_;
+};

@@ -1,10 +1,9 @@
-//
-// Created by timur on 16.03.2020.
-//
-
-#ifndef COMPILERS_02_PARSERS_DECLARATIONS_DECLARATIONLIST_H_
-#define COMPILERS_02_PARSERS_DECLARATIONS_DECLARATIONLIST_H_
-
-class DeclarationList {};
-
-#endif // COMPILERS_02_PARSERS_DECLARATIONS_DECLARATIONLIST_H_
+#pragma once
+#include "Declaration.h"
+class DeclarationList {
+public:
+  DeclarationList();
+  void AddDeclaration(Declaration* decl);
+private:
+  std::vector<Declaration*> declarations_;
+};

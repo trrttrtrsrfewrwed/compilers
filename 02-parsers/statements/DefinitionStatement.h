@@ -1,10 +1,13 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include "Statement.h"
+#include <expressions/Expression.h>
+#include <lvalues/Lvalue.h>
 
-#ifndef COMPILERS_02_PARSERS_STATEMENTS_DEFINITIONSTATEMENT_H_
-#define COMPILERS_02_PARSERS_STATEMENTS_DEFINITIONSTATEMENT_H_
+class DefinitionStatement: public Statement {
+public:
+  DefinitionStatement(Lvalue* lvalue, Expression* expr);
 
-class DefinitionStatement {};
-
-#endif // COMPILERS_02_PARSERS_STATEMENTS_DEFINITIONSTATEMENT_H_
+private:
+  Lvalue* lvalue_;
+  Expression* expr_;
+};

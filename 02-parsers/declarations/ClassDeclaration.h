@@ -1,10 +1,14 @@
-//
-// Created by timur on 16.03.2020.
-//
+#pragma once
+#include <string>
+#include "DeclarationList.h"
 
-#ifndef COMPILERS_02_PARSERS_DECLARATIONS_CLASSDECLARATION_H_
-#define COMPILERS_02_PARSERS_DECLARATIONS_CLASSDECLARATION_H_
+class ClassDeclaration {
+public:
+  ClassDeclaration(std::string class_name, DeclarationList* fields);
+  ClassDeclaration(std::string class_name, std::string parent_name, DeclarationList* fields);
 
-class ClassDeclaration {};
-
-#endif // COMPILERS_02_PARSERS_DECLARATIONS_CLASSDECLARATION_H_
+private:
+  std::string class_name_;
+  DeclarationList* fields_;
+  std::string parent_name_ = "";
+};
