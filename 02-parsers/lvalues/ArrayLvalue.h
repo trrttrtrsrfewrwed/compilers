@@ -6,8 +6,8 @@
 class ArrayLvalue: public Lvalue {
 public:
   ArrayLvalue(std::string id, Expression* idx);
+  void Accept(Visitor* visitor);
 
-private:
   std::string id_;
   Expression* idx_;
 };

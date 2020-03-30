@@ -1,7 +1,6 @@
 #include "driver.hh"
 #include "parser.hh"
-
-
+#include <visitors/PrintVisitor.h>
 
 Driver::Driver() :
     trace_parsing(false),
@@ -33,6 +32,12 @@ void Driver::scan_begin() {
     scanner.yyrestart(&stream);
   }
 }
+
+void Driver::PrintTree(const std::string& filename) {
+  PrintVisitor visitor(filename);
+  visitor.Visit(program);
+}
+
 
 void Driver::scan_end()
 {

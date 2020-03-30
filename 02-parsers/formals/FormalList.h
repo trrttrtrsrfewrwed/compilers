@@ -1,14 +1,15 @@
 #pragma once
 #include "types/Type.h"
-#include <string>
+#include <base_elements/BaseElement.h>
 #include <deque>
+#include <string>
 
-class FormalList {
+class FormalList: public BaseElement {
 public:
   FormalList();
   void AddFormal(Type* arg_type, std::string arg_name);
+  void Accept(Visitor* visitor);
 
-private:
   std::deque<std::pair<Type*, std::string>> args_;
 };
 

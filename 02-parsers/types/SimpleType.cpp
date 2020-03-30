@@ -14,3 +14,7 @@ SimpleType::SimpleType(TypeIdentifier *type_id) {
 }
 
 std::string SimpleType::GetType() { return type_; }
+
+void SimpleType::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

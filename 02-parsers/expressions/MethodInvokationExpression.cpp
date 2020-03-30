@@ -8,3 +8,7 @@ ExprInfo MethodInvokationExpression::eval() const {
   //TODO
   return {};
 }
+
+void MethodInvokationExpression::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

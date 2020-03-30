@@ -6,3 +6,7 @@ ExprInfo ArrayLengthExpression::eval() const {
   //TODO
   return {};
 }
+
+void ArrayLengthExpression::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

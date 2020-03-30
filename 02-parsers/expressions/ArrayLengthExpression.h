@@ -5,8 +5,8 @@ class ArrayLengthExpression: public Expression {
 public:
   ArrayLengthExpression(Expression* expr);
   ExprInfo eval() const override;
+  void Accept(Visitor* visitor);
 
-private:
   Expression* expr_;
 };
 

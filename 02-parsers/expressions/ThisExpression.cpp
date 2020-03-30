@@ -11,3 +11,7 @@ ExprInfo ThisExpression::eval() const {
   //TODO
   return {};
 }
+
+void ThisExpression::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

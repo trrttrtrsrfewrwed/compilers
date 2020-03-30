@@ -1,13 +1,15 @@
 #pragma once
-#include <string>
 #include "TypeIdentifier.h"
+#include <base_elements/BaseElement.h>
+#include <string>
 
-class SimpleType {
+class SimpleType: public BaseElement {
 public:
   SimpleType(std::string type);
   SimpleType(TypeIdentifier* type_id);
 
   std::string GetType();
-private:
+
+  void Accept(Visitor* visitor);
   std::string type_;
 };

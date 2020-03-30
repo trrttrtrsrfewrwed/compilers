@@ -6,3 +6,7 @@ ExprInfo NotExpression::eval() const {
   //TODO
   return {};
 }
+
+void NotExpression::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

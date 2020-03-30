@@ -7,3 +7,7 @@ ExprInfo ArrayExpression::eval() const {
   //TODO
   return {};
 }
+
+void ArrayExpression::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

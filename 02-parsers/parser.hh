@@ -47,13 +47,14 @@
 #line 9 "parser.y"
 
     #include <string>
+    #include <iostream>
     #include "BinaryOps.h"
     class Scanner;
     class Driver;
 
     #include "forward_decl.h"
 
-#line 57 "/home/timur/CLionProjects/untitled9/02-parsers/parser.hh"
+#line 58 "/home/timur/CLionProjects/untitled9/02-parsers/parser.hh"
 
 # include <cassert>
 # include <cstdlib> // std::abort
@@ -187,7 +188,7 @@
 #endif
 
 namespace yy {
-#line 191 "/home/timur/CLionProjects/untitled9/02-parsers/parser.hh"
+#line 192 "/home/timur/CLionProjects/untitled9/02-parsers/parser.hh"
 
 
 
@@ -2497,7 +2498,7 @@ switch (yytype)
   }
 
 } // yy
-#line 2501 "/home/timur/CLionProjects/untitled9/02-parsers/parser.hh"
+#line 2502 "/home/timur/CLionProjects/untitled9/02-parsers/parser.hh"
 
 
 

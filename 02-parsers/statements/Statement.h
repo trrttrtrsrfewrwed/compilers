@@ -1,3 +1,5 @@
 #pragma once
 
-class Statement {};
+#include <base_elements/BaseElement.h>
+
+class Statement: public BaseElement {};

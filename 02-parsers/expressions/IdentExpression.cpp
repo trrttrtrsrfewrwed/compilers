@@ -6,3 +6,7 @@ ExprInfo IdentExpression::eval() const {
   //TODO
   return {};
 }
+
+void IdentExpression::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

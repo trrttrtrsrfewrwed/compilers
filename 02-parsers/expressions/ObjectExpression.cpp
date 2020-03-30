@@ -7,3 +7,7 @@ ExprInfo ObjectExpression::eval() const {
 
   return {};
 }
+
+void ObjectExpression::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

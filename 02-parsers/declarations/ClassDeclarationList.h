@@ -2,10 +2,11 @@
 #include <vector>
 #include "ClassDeclaration.h"
 
-class ClassDeclarationList {
+class ClassDeclarationList: public BaseElement {
 public:
   ClassDeclarationList();
   ClassDeclarationList(ClassDeclaration* decl);
-private:
+  void Accept(Visitor* visitor);
+
   std::vector<ClassDeclaration*> declarations_;
 };

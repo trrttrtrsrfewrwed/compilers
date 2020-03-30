@@ -69,7 +69,8 @@ add_executable(
         statements/Statement.cpp
         statements/StatementList.cpp
         binary_operator/BinaryOperator.cpp
-        expressions/expr_info/ExprInfo.cpp)
+        expressions/expr_info/ExprInfo.cpp
+        base_elements/BaseElement.h visitors/Visitor.cpp visitors/Visitor.h declarations/CommonDeclaration.cpp visitors/PrintVisitor.cpp visitors/PrintVisitor.h)
 target_include_directories(ParserExample PRIVATE ${ParserExample_SOURCE_DIR})
 
 

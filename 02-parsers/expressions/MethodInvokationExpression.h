@@ -6,8 +6,8 @@ class MethodInvokationExpression: public Expression {
 public:
   MethodInvokationExpression(MethodInvokation* method_invokation);
   ExprInfo eval() const override;
+  void Accept(Visitor* visitor);
 
-private:
   MethodInvokation* method_invokation_;
 };
 

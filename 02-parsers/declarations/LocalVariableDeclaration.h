@@ -1,10 +1,10 @@
 #pragma once
 
 #include "VariableDeclaration.h"
-class LocalVariableDeclaration {
+class LocalVariableDeclaration: public BaseElement {
 public:
   LocalVariableDeclaration(VariableDeclaration* variable_declaration);
+  void Accept(Visitor* visitor);
 
-private:
   VariableDeclaration* variable_declaration_;
 };

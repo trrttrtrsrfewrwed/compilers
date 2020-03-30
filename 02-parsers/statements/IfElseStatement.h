@@ -5,8 +5,7 @@
 class IfElseStatement: public Statement {
 public:
   IfElseStatement(Expression* query, Statement* if_statement, Statement* else_statement);
-
-private:
+  void Accept(Visitor* visitor);
   Expression* query_;
   Statement* if_statement_;
   Statement* else_statement_;

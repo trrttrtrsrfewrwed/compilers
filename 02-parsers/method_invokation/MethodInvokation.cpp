@@ -12,3 +12,7 @@ MethodInvokation::MethodInvokation(Expression *obj, std::string func_name,
   args_ = following_args;
   args_->AddExpression(first_arg);
 }
+
+void MethodInvokation::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

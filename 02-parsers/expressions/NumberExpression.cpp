@@ -6,3 +6,7 @@ ExprInfo NumberExpression::eval() const {
   //TODO
   return {};
 }
+
+void NumberExpression::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

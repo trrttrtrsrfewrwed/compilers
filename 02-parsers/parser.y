@@ -8,6 +8,7 @@
 
 %code requires {
     #include <string>
+    #include <iostream>
     #include "BinaryOps.h"
     class Scanner;
     class Driver;
@@ -111,13 +112,15 @@
 
 %%
 %start unit;
-unit: main_class class_declarations { $$ = new Program($1, $2); };
+unit: main_class class_declarations { $$ = new Program($1, $2); driver.program = $$; };
 
 main_class: "class" "identifier" "{" "psvm" "(" ")" "{" statements "}" "}" { $$ = new MainClass($2, $8); };
 
 class_declarations:
-	%empty { $$ = new ClassDeclarationList(); }
-	| class_declaration { $$ = new ClassDeclarationList($1); };
+	%empty { $$ = new ClassDeclarationList();
+	 std::cout << "ERROR2\n";}
+	| class_declaration { $$ = new ClassDeclarationList($1);
+	 std::cout << "OK2\n"; };
 
 statements:
 	%empty { $$ = new StatementList(); }

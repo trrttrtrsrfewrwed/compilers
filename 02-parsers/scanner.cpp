@@ -1,4 +1,4 @@
-#line 1 "/home/timur/CLionProjects/CompilersCourse/02-parsers/scanner.cpp"
+ #line 1 "/home/timur/CLionProjects/CompilersCourse/02-parsers/scanner.cpp"
 
 #line 3 "/home/timur/CLionProjects/CompilersCourse/02-parsers/scanner.cpp"
 

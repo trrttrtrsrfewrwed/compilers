@@ -46,3 +46,4 @@ class ArrayType;
 class SimpleType;
 class Type;
 class TypeIdentifier;
+class BaseElement;

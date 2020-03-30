@@ -6,3 +6,7 @@ ExprInfo ParenthesesExpression::eval() const {
   //TODO
   return {};
 }
+
+void ParenthesesExpression::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

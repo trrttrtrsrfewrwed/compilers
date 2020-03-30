@@ -1,10 +1,12 @@
 #pragma once
 #include "SimpleType.h"
-class ArrayType {
+#include <base_elements/BaseElement.h>
+class ArrayType: public BaseElement {
 public:
   ArrayType(SimpleType* element_type);
 
   std::string GetType();
-private:
+
+  void Accept(Visitor* visitor);
   SimpleType* element_type_;
 };

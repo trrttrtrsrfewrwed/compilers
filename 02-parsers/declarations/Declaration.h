@@ -2,11 +2,12 @@
 
 #include "MethodDeclaration.h"
 #include "VariableDeclaration.h"
-class Declaration {
+class Declaration: public BaseElement {
 public:
   Declaration(VariableDeclaration* var_decl);
   Declaration(MethodDeclaration* method_decl);
+  void Accept(Visitor* visitor);
 
-private:
+
   CommonDeclaration* decl_;
 };

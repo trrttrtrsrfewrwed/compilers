@@ -5,8 +5,8 @@ class ParenthesesExpression: public Expression {
 public:
   ParenthesesExpression(Expression* expr);
   ExprInfo eval() const override;
+  void Accept(Visitor* visitor);
 
-private:
   Expression* expr_;
 };
 

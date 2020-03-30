@@ -2,11 +2,12 @@
 
 #include "Expression.h"
 #include <deque>
-class ExpressionList {
+class ExpressionList: public BaseElement{
 public:
   ExpressionList();
   void AddExpression(Expression* expr);
-private:
+  void Accept(Visitor* visitor);
+
   std::deque<Expression*> expressions_;
 };
 

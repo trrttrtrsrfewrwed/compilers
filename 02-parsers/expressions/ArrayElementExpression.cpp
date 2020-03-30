@@ -8,3 +8,7 @@ ExprInfo ArrayElementExpression::eval() const {
   //TODO
   return {};
 }
+
+void ArrayElementExpression::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

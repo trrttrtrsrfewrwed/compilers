@@ -5,3 +5,6 @@ ClassDeclaration::ClassDeclaration(std::string class_name,
 ClassDeclaration::ClassDeclaration(std::string class_name,
                                    std::string parent_name,
                                    DeclarationList *fields): class_name_(std::move(class_name)), parent_name_(std::move(parent_name)), fields_(fields) {}
+void ClassDeclaration::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

@@ -5,8 +5,7 @@
 class MethodInvokationStatement: public Statement {
 public:
   MethodInvokationStatement(MethodInvokation* method_invokation);
-
-private:
+  void Accept(Visitor* visitor);
   MethodInvokation* method_invokation_;
 };
 

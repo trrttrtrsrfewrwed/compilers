@@ -5,8 +5,8 @@ class NumberExpression: public Expression {
 public:
   NumberExpression(int value);
   ExprInfo eval() const override;
+  void Accept(Visitor* visitor);
 
-private:
   int value_;
 };
 

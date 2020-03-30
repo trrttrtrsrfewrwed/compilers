@@ -1,9 +1,10 @@
 #pragma once
 #include "Declaration.h"
-class DeclarationList {
+class DeclarationList: public BaseElement {
 public:
   DeclarationList();
   void AddDeclaration(Declaration* decl);
-private:
+  void Accept(Visitor* visitor);
+
   std::vector<Declaration*> declarations_;
 };

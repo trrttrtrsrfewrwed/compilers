@@ -15,3 +15,7 @@ ExprInfo BoolExpression::eval() const {
   //TODO
   return {};
 }
+
+void BoolExpression::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

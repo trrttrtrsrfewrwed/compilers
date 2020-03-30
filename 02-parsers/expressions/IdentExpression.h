@@ -6,8 +6,8 @@ class IdentExpression: public Expression {
 public:
   IdentExpression(std::string id);
   ExprInfo eval() const override;
+  void Accept(Visitor* visitor);
 
-private:
   std::string id_;
 };
 

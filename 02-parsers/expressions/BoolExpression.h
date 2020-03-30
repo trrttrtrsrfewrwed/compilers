@@ -6,8 +6,8 @@ class BoolExpression: public Expression {
 public:
   BoolExpression(const std::string& value);
   ExprInfo eval() const override;
+  void Accept(Visitor* visitor);
 
-private:
   bool value_;
 };
 

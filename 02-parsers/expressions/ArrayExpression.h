@@ -6,7 +6,8 @@ class ArrayExpression: public Expression {
 public:
   ArrayExpression(SimpleType* type, Expression* expr);
   ExprInfo eval() const override;
-private:
+  void Accept(Visitor* visitor);
+
   SimpleType* type_;
   Expression* expr_;
 };

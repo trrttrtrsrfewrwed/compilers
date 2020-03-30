@@ -5,7 +5,6 @@
 class LocalVariableDeclarationStatement: public Statement {
 public:
   LocalVariableDeclarationStatement(LocalVariableDeclaration* lv_decl);
-
-private:
+  void Accept(Visitor* visitor);
   LocalVariableDeclaration* lv_decl_;
 };

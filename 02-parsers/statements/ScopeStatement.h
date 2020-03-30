@@ -5,7 +5,6 @@
 class ScopeStatement: public Statement {
 public:
   ScopeStatement(StatementList* statements);
-
-private:
+  void Accept(Visitor* visitor);
   StatementList* statements_;
 };

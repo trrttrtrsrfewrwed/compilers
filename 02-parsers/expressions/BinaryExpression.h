@@ -6,7 +6,8 @@ class BinaryExpression: public Expression {
 public:
   BinaryExpression(Expression* e1, Expression* e2, BinaryOperator* op);
   ExprInfo eval() const override;
-private:
+  void Accept(Visitor* visitor);
+
   Expression* first;
   Expression* second;
   BinaryOperator* op_;

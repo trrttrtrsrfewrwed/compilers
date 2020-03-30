@@ -41,7 +41,7 @@
 
 
 // Unqualified %code blocks.
-#line 23 "parser.y"
+#line 24 "parser.y"
 
     #include "driver.hh"
     #include "location.hh"
@@ -711,145 +711,145 @@ namespace yy {
     switch (yytype)
     {
       case 39: // "identifier"
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < std::string > (); }
 #line 717 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 40: // "number"
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < int > (); }
 #line 723 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 45: // expr
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < Expression* > (); }
 #line 729 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 46: // unit
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < Program* > (); }
 #line 735 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 47: // main_class
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < MainClass* > (); }
 #line 741 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 48: // class_declarations
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < ClassDeclarationList* > (); }
 #line 747 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 49: // class_declaration
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < ClassDeclaration* > (); }
 #line 753 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 50: // statements
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < StatementList* > (); }
 #line 759 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 51: // statement
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < Statement* > (); }
 #line 765 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 52: // declarations
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < DeclarationList* > (); }
 #line 771 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 53: // declaration
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < Declaration* > (); }
 #line 777 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 54: // variable_declaration
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < VariableDeclaration* > (); }
 #line 783 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 55: // method_declaration
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < MethodDeclaration* > (); }
 #line 789 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 56: // type
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < Type* > (); }
 #line 795 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 57: // formals
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < FormalList* > (); }
 #line 801 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 58: // following_formals
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < FormalList* > (); }
 #line 807 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 59: // simple_type
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < SimpleType* > (); }
 #line 813 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 60: // array_type
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < ArrayType* > (); }
 #line 819 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 61: // type_identifier
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < TypeIdentifier* > (); }
 #line 825 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 62: // local_variable_declaration
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < LocalVariableDeclaration* > (); }
 #line 831 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 63: // method_invocation
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < MethodInvokation* > (); }
 #line 837 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 64: // following_exprs
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < ExpressionList* > (); }
 #line 843 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 65: // lvalue
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < Lvalue* > (); }
 #line 849 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 66: // binary_operator
-#line 110 "parser.y"
+#line 111 "parser.y"
                  { yyo << yysym.value.template as < BinaryOperator* > (); }
 #line 855 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
@@ -1183,413 +1183,415 @@ namespace yy {
           switch (yyn)
             {
   case 2:
-#line 114 "parser.y"
-                                    { yylhs.value.as < Program* > () = new Program(yystack_[1].value.as < MainClass* > (), yystack_[0].value.as < ClassDeclarationList* > ()); }
+#line 115 "parser.y"
+                                    { yylhs.value.as < Program* > () = new Program(yystack_[1].value.as < MainClass* > (), yystack_[0].value.as < ClassDeclarationList* > ()); driver.program = yylhs.value.as < Program* > (); }
 #line 1189 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 3:
-#line 116 "parser.y"
+#line 117 "parser.y"
                                                                            { yylhs.value.as < MainClass* > () = new MainClass(yystack_[8].value.as < std::string > (), yystack_[2].value.as < StatementList* > ()); }
 #line 1195 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 4:
-#line 119 "parser.y"
-               { yylhs.value.as < ClassDeclarationList* > () = new ClassDeclarationList(); }
-#line 1201 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 120 "parser.y"
+               { yylhs.value.as < ClassDeclarationList* > () = new ClassDeclarationList();
+	 std::cout << "ERROR2\n";}
+#line 1202 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 5:
-#line 120 "parser.y"
-                            { yylhs.value.as < ClassDeclarationList* > () = new ClassDeclarationList(yystack_[0].value.as < ClassDeclaration* > ()); }
-#line 1207 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 122 "parser.y"
+                            { yylhs.value.as < ClassDeclarationList* > () = new ClassDeclarationList(yystack_[0].value.as < ClassDeclaration* > ());
+	 std::cout << "OK2\n"; }
+#line 1209 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 6:
-#line 123 "parser.y"
+#line 126 "parser.y"
                { yylhs.value.as < StatementList* > () = new StatementList(); }
-#line 1213 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1215 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 7:
-#line 124 "parser.y"
+#line 127 "parser.y"
                                { yystack_[1].value.as < StatementList* > ()->AddStatement(yystack_[0].value.as < Statement* > ()); yylhs.value.as < StatementList* > () = yystack_[1].value.as < StatementList* > (); }
-#line 1219 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1221 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 8:
-#line 126 "parser.y"
+#line 129 "parser.y"
                                                              { yylhs.value.as < ClassDeclaration* > () = new ClassDeclaration(yystack_[3].value.as < std::string > (), yystack_[1].value.as < DeclarationList* > ()); }
-#line 1225 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1227 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 9:
-#line 127 "parser.y"
+#line 130 "parser.y"
                                                                                  { yylhs.value.as < ClassDeclaration* > () = new ClassDeclaration(yystack_[5].value.as < std::string > (), yystack_[3].value.as < std::string > (), yystack_[1].value.as < DeclarationList* > ()); }
-#line 1231 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1233 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 10:
-#line 129 "parser.y"
+#line 132 "parser.y"
                        { yylhs.value.as < DeclarationList* > () = new DeclarationList(); }
-#line 1237 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1239 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 11:
-#line 130 "parser.y"
+#line 133 "parser.y"
                                    { yystack_[1].value.as < DeclarationList* > ()->AddDeclaration(yystack_[0].value.as < Declaration* > ()); yylhs.value.as < DeclarationList* > () = yystack_[1].value.as < DeclarationList* > (); }
-#line 1243 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1245 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 12:
-#line 132 "parser.y"
+#line 135 "parser.y"
                                   { yylhs.value.as < Declaration* > () = new Declaration(yystack_[0].value.as < VariableDeclaration* > ()); }
-#line 1249 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1251 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 13:
-#line 133 "parser.y"
+#line 136 "parser.y"
                              { yylhs.value.as < Declaration* > () = new Declaration(yystack_[0].value.as < MethodDeclaration* > ()); }
-#line 1255 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1257 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 14:
-#line 135 "parser.y"
+#line 138 "parser.y"
                                                                           { yylhs.value.as < MethodDeclaration* > () = new MethodDeclaration(yystack_[6].value.as < Type* > (), yystack_[5].value.as < std::string > (), yystack_[1].value.as < StatementList* > ()); }
-#line 1261 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1263 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 15:
-#line 136 "parser.y"
+#line 139 "parser.y"
                                                                         { yylhs.value.as < MethodDeclaration* > () = new MethodDeclaration(yystack_[7].value.as < Type* > (), yystack_[6].value.as < std::string > (), yystack_[4].value.as < FormalList* > (), yystack_[1].value.as < StatementList* > ()); }
-#line 1267 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1269 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 16:
-#line 138 "parser.y"
+#line 141 "parser.y"
                                             { yylhs.value.as < VariableDeclaration* > () = new VariableDeclaration(yystack_[2].value.as < Type* > (), yystack_[1].value.as < std::string > ()); }
-#line 1273 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1275 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 17:
-#line 140 "parser.y"
+#line 143 "parser.y"
                                              { yystack_[0].value.as < FormalList* > ()->AddFormal(yystack_[2].value.as < Type* > (), yystack_[1].value.as < std::string > ()); yylhs.value.as < FormalList* > () = yystack_[0].value.as < FormalList* > (); }
-#line 1279 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1281 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 18:
-#line 143 "parser.y"
+#line 146 "parser.y"
                { yylhs.value.as < FormalList* > () = new FormalList(); }
-#line 1285 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1287 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 19:
-#line 144 "parser.y"
+#line 147 "parser.y"
                                                   { yystack_[0].value.as < FormalList* > ()->AddFormal(yystack_[2].value.as < Type* > (), yystack_[1].value.as < std::string > ()); yylhs.value.as < FormalList* > () = yystack_[0].value.as < FormalList* > (); }
-#line 1291 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1293 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 20:
-#line 147 "parser.y"
+#line 150 "parser.y"
                     { yylhs.value.as < Type* > () = new Type(yystack_[0].value.as < SimpleType* > ()); }
-#line 1297 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1299 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 21:
-#line 148 "parser.y"
+#line 151 "parser.y"
                      { yylhs.value.as < Type* > () = new Type(yystack_[0].value.as < ArrayType* > ()); }
-#line 1303 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1305 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 22:
-#line 151 "parser.y"
+#line 154 "parser.y"
               { yylhs.value.as < SimpleType* > () = new SimpleType("int"); }
-#line 1309 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1311 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 23:
-#line 152 "parser.y"
+#line 155 "parser.y"
                     { yylhs.value.as < SimpleType* > () = new SimpleType("boolean"); }
-#line 1315 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1317 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 24:
-#line 153 "parser.y"
+#line 156 "parser.y"
                  { yylhs.value.as < SimpleType* > () = new SimpleType("void"); }
-#line 1321 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1323 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 25:
-#line 154 "parser.y"
+#line 157 "parser.y"
                           { yylhs.value.as < SimpleType* > () = new SimpleType(yystack_[0].value.as < TypeIdentifier* > ()); }
-#line 1327 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1329 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 26:
-#line 157 "parser.y"
+#line 160 "parser.y"
                             { yylhs.value.as < ArrayType* > () = new ArrayType(yystack_[2].value.as < SimpleType* > ()); }
-#line 1333 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1335 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 27:
-#line 160 "parser.y"
+#line 163 "parser.y"
                      { yylhs.value.as < TypeIdentifier* > () = new TypeIdentifier(yystack_[0].value.as < std::string > ()); }
-#line 1339 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1341 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 28:
-#line 162 "parser.y"
+#line 165 "parser.y"
                                      { yylhs.value.as < Statement* > () = new AssertStatement(yystack_[2].value.as < Expression* > ()); }
-#line 1345 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1347 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 29:
-#line 163 "parser.y"
+#line 166 "parser.y"
                                            { yylhs.value.as < Statement* > () = new LocalVariableDeclarationStatement(yystack_[0].value.as < LocalVariableDeclaration* > ()); }
-#line 1351 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1353 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 30:
-#line 164 "parser.y"
+#line 167 "parser.y"
                                    { yylhs.value.as < Statement* > () = new ScopeStatement(yystack_[1].value.as < StatementList* > ()); }
-#line 1357 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1359 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 31:
-#line 165 "parser.y"
+#line 168 "parser.y"
                                              { yylhs.value.as < Statement* > () = new IfStatement(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Statement* > ()); }
-#line 1363 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1365 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 32:
-#line 166 "parser.y"
+#line 169 "parser.y"
                                                               { yylhs.value.as < Statement* > () = new IfElseStatement(yystack_[4].value.as < Expression* > (), yystack_[2].value.as < Statement* > (), yystack_[0].value.as < Statement* > ()); }
-#line 1369 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1371 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 33:
-#line 167 "parser.y"
+#line 170 "parser.y"
                                                  { yylhs.value.as < Statement* > () = new WhileStatement(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Statement* > ()); }
-#line 1375 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1377 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 34:
-#line 168 "parser.y"
+#line 171 "parser.y"
                                          { yylhs.value.as < Statement* > () = new SoutStatement(yystack_[2].value.as < Expression* > ()); }
-#line 1381 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1383 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 35:
-#line 169 "parser.y"
+#line 172 "parser.y"
                                      { yylhs.value.as < Statement* > () = new DefinitionStatement(yystack_[3].value.as < Lvalue* > (), yystack_[1].value.as < Expression* > ()); }
-#line 1387 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1389 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 36:
-#line 170 "parser.y"
+#line 173 "parser.y"
                                    { yylhs.value.as < Statement* > () = new ReturnStatement(yystack_[1].value.as < Expression* > ()); }
-#line 1393 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1395 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 37:
-#line 171 "parser.y"
+#line 174 "parser.y"
                                       { yylhs.value.as < Statement* > () = new MethodInvokationStatement(yystack_[1].value.as < MethodInvokation* > ()); }
-#line 1399 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1401 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 38:
-#line 173 "parser.y"
+#line 176 "parser.y"
                                                  { yylhs.value.as < LocalVariableDeclaration* > () = new LocalVariableDeclaration(yystack_[0].value.as < VariableDeclaration* > ()); }
-#line 1405 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1407 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 39:
-#line 175 "parser.y"
+#line 178 "parser.y"
                                                  { yylhs.value.as < MethodInvokation* > () = new MethodInvokation(yystack_[4].value.as < Expression* > (), yystack_[2].value.as < std::string > ()); }
-#line 1411 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1413 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 40:
-#line 176 "parser.y"
+#line 179 "parser.y"
                                                                      { yylhs.value.as < MethodInvokation* > () = new MethodInvokation(yystack_[6].value.as < Expression* > (), yystack_[4].value.as < std::string > (), yystack_[2].value.as < Expression* > (), yystack_[1].value.as < ExpressionList* > ()); }
-#line 1417 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1419 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 41:
-#line 179 "parser.y"
+#line 182 "parser.y"
                { yylhs.value.as < ExpressionList* > () = new ExpressionList(); }
-#line 1423 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1425 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 42:
-#line 180 "parser.y"
+#line 183 "parser.y"
                                    { yystack_[0].value.as < ExpressionList* > ()->AddExpression(yystack_[1].value.as < Expression* > ()); yylhs.value.as < ExpressionList* > () = yystack_[0].value.as < ExpressionList* > (); }
-#line 1429 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1431 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 43:
-#line 184 "parser.y"
+#line 187 "parser.y"
                      { yylhs.value.as < Lvalue* > () = new SimpleLvalue(yystack_[0].value.as < std::string > ()); }
-#line 1435 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1437 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 44:
-#line 185 "parser.y"
+#line 188 "parser.y"
                                      { yylhs.value.as < Lvalue* > () = new ArrayLvalue(yystack_[3].value.as < std::string > (), yystack_[1].value.as < Expression* > ()); }
-#line 1441 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1443 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 45:
-#line 187 "parser.y"
+#line 190 "parser.y"
                                    {
 		yylhs.value.as < Expression* > () = new BinaryExpression(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > (), yystack_[1].value.as < BinaryOperator* > ());
 }
-#line 1449 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1451 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 46:
-#line 190 "parser.y"
+#line 193 "parser.y"
                              {
 		yylhs.value.as < Expression* > () = new ArrayElementExpression(yystack_[3].value.as < Expression* > (), yystack_[1].value.as < Expression* > ());
 	}
-#line 1457 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1459 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 47:
-#line 193 "parser.y"
+#line 196 "parser.y"
                             {
 		yylhs.value.as < Expression* > () = new ArrayLengthExpression(yystack_[2].value.as < Expression* > ());
 	}
-#line 1465 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1467 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 48:
-#line 196 "parser.y"
+#line 199 "parser.y"
                                          {
 		yylhs.value.as < Expression* > () = new ArrayExpression(yystack_[3].value.as < SimpleType* > (), yystack_[1].value.as < Expression* > ());
 	}
-#line 1473 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1475 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 49:
-#line 199 "parser.y"
+#line 202 "parser.y"
                                         {
 		yylhs.value.as < Expression* > () = new ObjectExpression(yystack_[2].value.as < TypeIdentifier* > ());
 	}
-#line 1481 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1483 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 50:
-#line 202 "parser.y"
+#line 205 "parser.y"
                    { yylhs.value.as < Expression* > () = new NotExpression(yystack_[0].value.as < Expression* > ()); }
-#line 1487 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1489 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 51:
-#line 203 "parser.y"
+#line 206 "parser.y"
                        { yylhs.value.as < Expression* > () = new ParenthesesExpression(yystack_[1].value.as < Expression* > ()); }
-#line 1493 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1495 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 52:
-#line 204 "parser.y"
+#line 207 "parser.y"
                         { yylhs.value.as < Expression* > () = new IdentExpression(yystack_[0].value.as < std::string > ()); }
-#line 1499 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1501 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 53:
-#line 205 "parser.y"
+#line 208 "parser.y"
                     { yylhs.value.as < Expression* > () = new NumberExpression(yystack_[0].value.as < int > ()); }
-#line 1505 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1507 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 54:
-#line 206 "parser.y"
+#line 209 "parser.y"
                  { yylhs.value.as < Expression* > () = new ThisExpression("this"); }
-#line 1511 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1513 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 55:
-#line 207 "parser.y"
+#line 210 "parser.y"
                  { yylhs.value.as < Expression* > () = new BoolExpression("true"); }
-#line 1517 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1519 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 56:
-#line 208 "parser.y"
+#line 211 "parser.y"
                   { yylhs.value.as < Expression* > () = new BoolExpression("false"); }
-#line 1523 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1525 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 57:
-#line 209 "parser.y"
+#line 212 "parser.y"
                             { yylhs.value.as < Expression* > () = new MethodInvokationExpression(yystack_[0].value.as < MethodInvokation* > ()); }
-#line 1529 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1531 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 58:
-#line 213 "parser.y"
+#line 216 "parser.y"
                { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(AndOp); }
-#line 1535 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1537 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 59:
-#line 214 "parser.y"
+#line 217 "parser.y"
                  { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(OrOp); }
-#line 1541 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1543 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 60:
-#line 215 "parser.y"
+#line 218 "parser.y"
                  { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(LessOp); }
-#line 1547 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1549 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 61:
-#line 216 "parser.y"
+#line 219 "parser.y"
                 { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(GreaterOp); }
-#line 1553 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1555 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 62:
-#line 217 "parser.y"
+#line 220 "parser.y"
                   { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(EqualOp); }
-#line 1559 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1561 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 63:
-#line 218 "parser.y"
+#line 221 "parser.y"
                 { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(AddOp); }
-#line 1565 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1567 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 64:
-#line 219 "parser.y"
+#line 222 "parser.y"
                 { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(SubtractOp); }
-#line 1571 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1573 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 65:
-#line 220 "parser.y"
+#line 223 "parser.y"
                { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(MultiplyOp); }
-#line 1577 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1579 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 66:
-#line 221 "parser.y"
+#line 224 "parser.y"
                { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(DivOp); }
-#line 1583 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1585 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 67:
-#line 222 "parser.y"
+#line 225 "parser.y"
                { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(ModOp); }
-#line 1589 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1591 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
 
-#line 1593 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1595 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
 
             default:
               break;
@@ -2102,13 +2104,13 @@ namespace yy {
   const unsigned char
   parser::yyrline_[] =
   {
-       0,   114,   114,   116,   119,   120,   123,   124,   126,   127,
-     129,   130,   132,   133,   135,   136,   138,   140,   143,   144,
-     147,   148,   151,   152,   153,   154,   157,   160,   162,   163,
-     164,   165,   166,   167,   168,   169,   170,   171,   173,   175,
-     176,   179,   180,   184,   185,   187,   190,   193,   196,   199,
-     202,   203,   204,   205,   206,   207,   208,   209,   213,   214,
-     215,   216,   217,   218,   219,   220,   221,   222
+       0,   115,   115,   117,   120,   122,   126,   127,   129,   130,
+     132,   133,   135,   136,   138,   139,   141,   143,   146,   147,
+     150,   151,   154,   155,   156,   157,   160,   163,   165,   166,
+     167,   168,   169,   170,   171,   172,   173,   174,   176,   178,
+     179,   182,   183,   187,   188,   190,   193,   196,   199,   202,
+     205,   206,   207,   208,   209,   210,   211,   212,   216,   217,
+     218,   219,   220,   221,   222,   223,   224,   225
   };
 
   // Print the state stack on the debug stream.
@@ -2142,9 +2144,9 @@ namespace yy {
 
 
 } // yy
-#line 2146 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 2148 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
 
-#line 232 "parser.y"
+#line 235 "parser.y"
 
 
 void

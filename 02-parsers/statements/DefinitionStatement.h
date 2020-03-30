@@ -6,8 +6,7 @@
 class DefinitionStatement: public Statement {
 public:
   DefinitionStatement(Lvalue* lvalue, Expression* expr);
-
-private:
+  void Accept(Visitor* visitor);
   Lvalue* lvalue_;
   Expression* expr_;
 };

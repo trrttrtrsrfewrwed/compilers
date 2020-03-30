@@ -5,8 +5,8 @@
 class SimpleLvalue: public Lvalue {
 public:
   SimpleLvalue(std::string id);
+  void Accept(Visitor* visitor);
 
-private:
   std::string id_;
 };
 

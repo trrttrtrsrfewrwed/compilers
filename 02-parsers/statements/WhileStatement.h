@@ -5,8 +5,7 @@
 class WhileStatement: public Statement {
 public:
   WhileStatement(Expression* query, Statement* while_statement);
-
-private:
+  void Accept(Visitor* visitor);
   Expression* query_;
   Statement* while_statement_;
 };

@@ -34,3 +34,7 @@ ExprInfo BinaryExpression::eval() const {
     return {};
   }
 }
+
+void BinaryExpression::Accept(Visitor *visitor) {
+  visitor->Visit(this);
+}

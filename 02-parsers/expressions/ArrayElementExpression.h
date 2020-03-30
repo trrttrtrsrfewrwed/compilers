@@ -5,7 +5,8 @@ class ArrayElementExpression: public Expression {
 public:
   ArrayElementExpression(Expression* type, Expression* idx);
   ExprInfo eval() const override;
-private:
+  void Accept(Visitor* visitor);
+
   Expression* type_;
   Expression* idx_;
 };

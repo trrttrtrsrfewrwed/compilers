@@ -6,7 +6,7 @@ class ObjectExpression: public Expression {
 public:
   ObjectExpression(TypeIdentifier* identifier);
   ExprInfo eval() const override;
+  void Accept(Visitor* visitor);
 
-private:
   TypeIdentifier* identifier_;
 };

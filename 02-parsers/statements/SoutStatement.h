@@ -5,7 +5,6 @@
 class SoutStatement: public Statement {
 public:
   SoutStatement(Expression* expr);
-
-private:
+  void Accept(Visitor* visitor);
   Expression* expr_;
 };

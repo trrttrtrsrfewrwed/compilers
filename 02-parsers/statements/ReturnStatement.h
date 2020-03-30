@@ -5,8 +5,7 @@
 class ReturnStatement: public Statement {
 public:
   ReturnStatement(Expression* return_expr);
-
-private:
+  void Accept(Visitor* visitor);
   Expression* return_expr_;
 };
 

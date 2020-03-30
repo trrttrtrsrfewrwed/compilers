@@ -1,3 +1,8 @@
 #pragma once
 
-class CommonDeclaration {};
+#include <base_elements/BaseElement.h>
+
+class CommonDeclaration: public BaseElement {
+public:
+  void Accept(Visitor* visitor);
+};

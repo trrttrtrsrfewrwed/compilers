@@ -5,8 +5,7 @@
 class AssertStatement: public Statement {
 public:
   AssertStatement(Expression* expr);
-
-private:
+  void Accept(Visitor* visitor);
   Expression* expr_;
 };
 
