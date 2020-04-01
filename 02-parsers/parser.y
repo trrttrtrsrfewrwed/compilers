@@ -80,6 +80,8 @@
         PERCENT "%"
         LPAREN "("
         RPAREN ")"
+        LSQUARE "["
+        RSQUARE "]"
 ;
 
 %token <std::string> IDENTIFIER "identifier"
@@ -117,10 +119,8 @@ unit: main_class class_declarations { $$ = new Program($1, $2); driver.program =
 main_class: "class" "identifier" "{" "psvm" "(" ")" "{" statements "}" "}" { $$ = new MainClass($2, $8); };
 
 class_declarations:
-	%empty { $$ = new ClassDeclarationList();
-	 std::cout << "ERROR2\n";}
-	| class_declaration { $$ = new ClassDeclarationList($1);
-	 std::cout << "OK2\n"; };
+	%empty { $$ = new ClassDeclarationList(); }
+	| class_declarations class_declaration { $1->AddClassDeclaration($2); $$ = $1; };
 
 statements:
 	%empty { $$ = new StatementList(); }

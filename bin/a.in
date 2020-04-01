@@ -1,5 +1,16 @@
 class Factorial {
   public static void main () {
+    Fac a;
+    a = new Fac();
+    {
+        Fac a;
+        a = new Fac();
+        a.ComputeFac (10);
+        {
+            int b;
+        }
+        int[] b;
+    }
     System.out.println (new Fac ().ComputeFac (10));
   }
 }

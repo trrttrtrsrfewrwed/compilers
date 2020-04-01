@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
         }
     }*/
   driver.parse(argv[1]);
-  std::cout << "LOL\n";
+  driver.Evaluate();
   driver.PrintTree(argv[2]);
 
   return result;

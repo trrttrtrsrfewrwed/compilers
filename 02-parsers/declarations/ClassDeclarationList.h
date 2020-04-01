@@ -5,7 +5,7 @@
 class ClassDeclarationList: public BaseElement {
 public:
   ClassDeclarationList();
-  ClassDeclarationList(ClassDeclaration* decl);
+  void AddClassDeclaration(ClassDeclaration* decl);
   void Accept(Visitor* visitor);
 
   std::vector<ClassDeclaration*> declarations_;

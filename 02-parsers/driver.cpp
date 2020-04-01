@@ -1,6 +1,7 @@
 #include "driver.hh"
 #include "parser.hh"
 #include <visitors/PrintVisitor.h>
+#include <visitors/SymbolTreeVisitor.h>
 
 Driver::Driver() :
     trace_parsing(false),
@@ -31,6 +32,16 @@ void Driver::scan_begin() {
     std::cout << file << std::endl;
     scanner.yyrestart(&stream);
   }
+}
+
+int Driver::Evaluate() {
+  SymbolTreeVisitor visitor;
+  visitor.Visit(program);
+
+  std::cout << "Symbol tree built" << std::endl;
+
+  visitor.PrintTree("\"symbol_tree.txt\"");
+  return 0;
 }
 
 void Driver::PrintTree(const std::string& filename) {

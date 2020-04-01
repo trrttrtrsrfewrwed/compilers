@@ -70,7 +70,12 @@ add_executable(
         statements/StatementList.cpp
         binary_operator/BinaryOperator.cpp
         expressions/expr_info/ExprInfo.cpp
-        base_elements/BaseElement.h visitors/Visitor.cpp visitors/Visitor.h declarations/CommonDeclaration.cpp visitors/PrintVisitor.cpp visitors/PrintVisitor.h)
+        base_elements/BaseElement.h
+        visitors/Visitor.cpp
+        visitors/Visitor.h
+        declarations/CommonDeclaration.cpp
+        visitors/PrintVisitor.cpp
+        visitors/PrintVisitor.h symbol_table/ScopeLayer.cpp symbol_table/ScopeLayer.h symbol_table/Symbol.cpp symbol_table/Symbol.h objects/BasicType.cpp objects/BasicType.h objects/PrimitiveType.cpp objects/PrimitiveType.h objects/UninitObject.cpp objects/UninitObject.h visitors/TemplateVisitor.cpp visitors/TemplateVisitor.h visitors/SymbolTreeVisitor.cpp visitors/SymbolTreeVisitor.h symbol_table/ClassSymbolTree.cpp symbol_table/ClassSymbolTree.h objects/ObjectType.cpp objects/ObjectType.h objects/MethodType.cpp objects/MethodType.h objects/ClassType.cpp objects/ClassType.h)
 target_include_directories(ParserExample PRIVATE ${ParserExample_SOURCE_DIR})
 
 
