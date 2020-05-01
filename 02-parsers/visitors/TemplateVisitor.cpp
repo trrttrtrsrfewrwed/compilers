@@ -1,4 +1,5 @@
 #include "TemplateVisitor.h"
+#include <objects/BasicObject.h>
 
 template<typename T>
 T TemplateVisitor<T>::Accept(BaseElement * element) {
@@ -6,4 +7,4 @@ T TemplateVisitor<T>::Accept(BaseElement * element) {
   return tos_value_;
 }
 
-template int TemplateVisitor<int>::Accept(BaseElement* element);
+template BasicObject* TemplateVisitor<BasicObject*>::Accept(BaseElement* element);

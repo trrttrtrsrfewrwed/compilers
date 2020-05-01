@@ -1,28 +1,50 @@
 class Factorial {
   public static void main () {
-    Fac a;
-    a = new Fac();
-    {
-        Fac a;
-        a = new Fac();
-        a.ComputeFac (10);
-        {
-            int b;
-        }
-        int[] b;
-    }
-    System.out.println (new Fac ().ComputeFac (10));
+    int[] a;
+    int[] b;
+    b = new int[3];
+    b[0] = 1;
+    b[1] = 2;
+    b[2] = 3;
+    a = b;
+
+    Fac c;
+    c.GG();
+    c.ComputeFac(a[1]);
+    System.out.println(a[1]);
+    System.out.println(b[1]);
+
+    c.ChangeArray(a);
+    System.out.println(a[0]);
+    System.out.println(a[1]);
+    System.out.println(a[2]);
+
+    System.out.println(b[0]);
+    System.out.println(b[1]);
+    System.out.println(b[2]);
   }
 }
 
 class Fac {
+  int cnt;
+  public void ChangeArray(int[] arr) {
+    arr[0] = 8;
+    arr[1] = 9;
+    arr[2] = 10;
+  }
+
   public int ComputeFac (int num) {
-    assert (num > 1);
     int num_aux;
+    cnt = cnt + 1;
+    System.out.println(cnt);
     if (num == 0)
       num_aux = 1;
     else
       num_aux = num * this.ComputeFac (num-1);
+    num = 77;
     return num_aux;
+  }
+  public void GG () {
+    cnt = 0;
   }
 }

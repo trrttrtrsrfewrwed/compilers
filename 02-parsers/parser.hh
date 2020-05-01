@@ -1,4 +1,4 @@
-// A Bison parser, made by GNU Bison 3.5.2.
+// A Bison parser, made by GNU Bison 3.5.4.
 
 // Skeleton interface for Bison LALR(1) parsers in C++
 
@@ -547,8 +547,9 @@ namespace yy {
         TOK_RPAREN = 293,
         TOK_LSQUARE = 294,
         TOK_RSQUARE = 295,
-        TOK_IDENTIFIER = 296,
-        TOK_NUMBER = 297
+        TOK_COMMA = 296,
+        TOK_IDENTIFIER = 297,
+        TOK_NUMBER = 298
       };
     };
 
@@ -1009,11 +1010,11 @@ switch (yytype)
         value.template destroy< VariableDeclaration* > ();
         break;
 
-      case 42: // "number"
+      case 43: // "number"
         value.template destroy< int > ();
         break;
 
-      case 41: // "identifier"
+      case 42: // "identifier"
         value.template destroy< std::string > ();
         break;
 
@@ -1093,13 +1094,13 @@ switch (yytype)
       symbol_type (int tok, location_type l)
         : super_type(token_type (tok), std::move (l))
       {
-        YY_ASSERT (tok == token::TOK_END || tok == token::TOK_SOUT || tok == token::TOK_PSVM || tok == token::TOK_ASSERT || tok == token::TOK_RETURN || tok == token::TOK_TRUE || tok == token::TOK_FALSE || tok == token::TOK_NEW || tok == token::TOK_THIS || tok == token::TOK_LBRACE || tok == token::TOK_RBRACE || tok == token::TOK_INT || tok == token::TOK_BOOLEAN || tok == token::TOK_VOID || tok == token::TOK_SEMICOLON || tok == token::TOK_ASSIGN || tok == token::TOK_CLASS || tok == token::TOK_EXTENDS || tok == token::TOK_PUBLIC || tok == token::TOK_LENGTH || tok == token::TOK_IF || tok == token::TOK_ELSE || tok == token::TOK_WHILE || tok == token::TOK_DOT || tok == token::TOK_NOT || tok == token::TOK_AND || tok == token::TOK_OR || tok == token::TOK_LESS || tok == token::TOK_GREATER || tok == token::TOK_EQUAL || tok == token::TOK_MINUS || tok == token::TOK_PLUS || tok == token::TOK_STAR || tok == token::TOK_SLASH || tok == token::TOK_PERCENT || tok == token::TOK_LPAREN || tok == token::TOK_RPAREN || tok == token::TOK_LSQUARE || tok == token::TOK_RSQUARE || tok == 298);
+        YY_ASSERT (tok == token::TOK_END || tok == token::TOK_SOUT || tok == token::TOK_PSVM || tok == token::TOK_ASSERT || tok == token::TOK_RETURN || tok == token::TOK_TRUE || tok == token::TOK_FALSE || tok == token::TOK_NEW || tok == token::TOK_THIS || tok == token::TOK_LBRACE || tok == token::TOK_RBRACE || tok == token::TOK_INT || tok == token::TOK_BOOLEAN || tok == token::TOK_VOID || tok == token::TOK_SEMICOLON || tok == token::TOK_ASSIGN || tok == token::TOK_CLASS || tok == token::TOK_EXTENDS || tok == token::TOK_PUBLIC || tok == token::TOK_LENGTH || tok == token::TOK_IF || tok == token::TOK_ELSE || tok == token::TOK_WHILE || tok == token::TOK_DOT || tok == token::TOK_NOT || tok == token::TOK_AND || tok == token::TOK_OR || tok == token::TOK_LESS || tok == token::TOK_GREATER || tok == token::TOK_EQUAL || tok == token::TOK_MINUS || tok == token::TOK_PLUS || tok == token::TOK_STAR || tok == token::TOK_SLASH || tok == token::TOK_PERCENT || tok == token::TOK_LPAREN || tok == token::TOK_RPAREN || tok == token::TOK_LSQUARE || tok == token::TOK_RSQUARE || tok == token::TOK_COMMA);
       }
 #else
       symbol_type (int tok, const location_type& l)
         : super_type(token_type (tok), l)
       {
-        YY_ASSERT (tok == token::TOK_END || tok == token::TOK_SOUT || tok == token::TOK_PSVM || tok == token::TOK_ASSERT || tok == token::TOK_RETURN || tok == token::TOK_TRUE || tok == token::TOK_FALSE || tok == token::TOK_NEW || tok == token::TOK_THIS || tok == token::TOK_LBRACE || tok == token::TOK_RBRACE || tok == token::TOK_INT || tok == token::TOK_BOOLEAN || tok == token::TOK_VOID || tok == token::TOK_SEMICOLON || tok == token::TOK_ASSIGN || tok == token::TOK_CLASS || tok == token::TOK_EXTENDS || tok == token::TOK_PUBLIC || tok == token::TOK_LENGTH || tok == token::TOK_IF || tok == token::TOK_ELSE || tok == token::TOK_WHILE || tok == token::TOK_DOT || tok == token::TOK_NOT || tok == token::TOK_AND || tok == token::TOK_OR || tok == token::TOK_LESS || tok == token::TOK_GREATER || tok == token::TOK_EQUAL || tok == token::TOK_MINUS || tok == token::TOK_PLUS || tok == token::TOK_STAR || tok == token::TOK_SLASH || tok == token::TOK_PERCENT || tok == token::TOK_LPAREN || tok == token::TOK_RPAREN || tok == token::TOK_LSQUARE || tok == token::TOK_RSQUARE || tok == 298);
+        YY_ASSERT (tok == token::TOK_END || tok == token::TOK_SOUT || tok == token::TOK_PSVM || tok == token::TOK_ASSERT || tok == token::TOK_RETURN || tok == token::TOK_TRUE || tok == token::TOK_FALSE || tok == token::TOK_NEW || tok == token::TOK_THIS || tok == token::TOK_LBRACE || tok == token::TOK_RBRACE || tok == token::TOK_INT || tok == token::TOK_BOOLEAN || tok == token::TOK_VOID || tok == token::TOK_SEMICOLON || tok == token::TOK_ASSIGN || tok == token::TOK_CLASS || tok == token::TOK_EXTENDS || tok == token::TOK_PUBLIC || tok == token::TOK_LENGTH || tok == token::TOK_IF || tok == token::TOK_ELSE || tok == token::TOK_WHILE || tok == token::TOK_DOT || tok == token::TOK_NOT || tok == token::TOK_AND || tok == token::TOK_OR || tok == token::TOK_LESS || tok == token::TOK_GREATER || tok == token::TOK_EQUAL || tok == token::TOK_MINUS || tok == token::TOK_PLUS || tok == token::TOK_STAR || tok == token::TOK_SLASH || tok == token::TOK_PERCENT || tok == token::TOK_LPAREN || tok == token::TOK_RPAREN || tok == token::TOK_LSQUARE || tok == token::TOK_RSQUARE || tok == token::TOK_COMMA);
       }
 #endif
 #if 201103L <= YY_CPLUSPLUS
@@ -1753,6 +1754,21 @@ switch (yytype)
 #if 201103L <= YY_CPLUSPLUS
       static
       symbol_type
+      make_COMMA (location_type l)
+      {
+        return symbol_type (token::TOK_COMMA, std::move (l));
+      }
+#else
+      static
+      symbol_type
+      make_COMMA (const location_type& l)
+      {
+        return symbol_type (token::TOK_COMMA, l);
+      }
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      static
+      symbol_type
       make_IDENTIFIER (std::string v, location_type l)
       {
         return symbol_type (token::TOK_IDENTIFIER, std::move (v), std::move (l));
@@ -2086,7 +2102,7 @@ switch (yytype)
     enum
     {
       yyeof_ = 0,
-      yylast_ = 483,     ///< Last index in yytable_.
+      yylast_ = 485,     ///< Last index in yytable_.
       yynnts_ = 23,  ///< Number of nonterminal symbols.
       yyfinal_ = 5, ///< Termination state number.
       yyntokens_ = 44  ///< Number of tokens.
@@ -2244,11 +2260,11 @@ switch (yytype)
         value.move< VariableDeclaration* > (std::move (that.value));
         break;
 
-      case 42: // "number"
+      case 43: // "number"
         value.move< int > (std::move (that.value));
         break;
 
-      case 41: // "identifier"
+      case 42: // "identifier"
         value.move< std::string > (std::move (that.value));
         break;
 
@@ -2352,11 +2368,11 @@ switch (yytype)
         value.copy< VariableDeclaration* > (YY_MOVE (that.value));
         break;
 
-      case 42: // "number"
+      case 43: // "number"
         value.copy< int > (YY_MOVE (that.value));
         break;
 
-      case 41: // "identifier"
+      case 42: // "identifier"
         value.copy< std::string > (YY_MOVE (that.value));
         break;
 
@@ -2467,11 +2483,11 @@ switch (yytype)
         value.move< VariableDeclaration* > (YY_MOVE (s.value));
         break;
 
-      case 42: // "number"
+      case 43: // "number"
         value.move< int > (YY_MOVE (s.value));
         break;
 
-      case 41: // "identifier"
+      case 42: // "identifier"
         value.move< std::string > (YY_MOVE (s.value));
         break;
 
@@ -2530,7 +2546,7 @@ switch (yytype)
   }
 
 } // yy
-#line 2534 "/home/timur/CLionProjects/untitled9/02-parsers/parser.hh"
+#line 2550 "/home/timur/CLionProjects/untitled9/02-parsers/parser.hh"
 
 
 

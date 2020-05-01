@@ -1,6 +1,6 @@
 #pragma once
 
-#include <base_elements/BaseElement.h>
+#include <grammar/base_elements/BaseElement.h>
 
 template<typename T>
 class TemplateVisitor : public Visitor {

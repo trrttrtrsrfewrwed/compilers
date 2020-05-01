@@ -26,56 +26,56 @@ add_executable(
     driver.cpp
     ${BISON_MyParser_OUTPUTS}
     ${FLEX_MyScanner_OUTPUTS}
-        expressions/BinaryExpression.cpp
-        expressions/ArrayExpression.cpp
-        expressions/ArrayElementExpression.cpp
-        expressions/ArrayLengthExpression.cpp
-        expressions/ObjectExpression.cpp
-        expressions/NotExpression.cpp
-        expressions/ParenthesesExpression.cpp
-        expressions/IdentExpression.cpp
-        expressions/NumberExpression.cpp
-        expressions/ThisExpression.cpp
-        expressions/BoolExpression.cpp
-        expressions/MethodInvokationExpression.cpp
-        lvalues/SimpleLvalue.cpp
-        lvalues/ArrayLvalue.cpp
-        expressions/ExpressionList.cpp
-        method_invokation/MethodInvokation.cpp
-        statements/AssertStatement.cpp
-        statements/LocalVariableDeclarationStatement.cpp
-        statements/ScopeStatement.cpp
-        statements/IfStatement.cpp
-        statements/IfElseStatement.cpp
-        statements/WhileStatement.cpp
-        statements/SoutStatement.cpp
-        statements/DefinitionStatement.cpp
-        statements/ReturnStatement.cpp
-        statements/MethodInvokationStatement.cpp
-        main_structures/Program.cpp
-        main_structures/MainClass.cpp
-        declarations/ClassDeclarationList.cpp
-        declarations/DeclarationList.cpp
-        declarations/MethodDeclaration.cpp
-        declarations/VariableDeclaration.cpp
-        declarations/LocalVariableDeclaration.cpp
-        declarations/ClassDeclaration.cpp
-        declarations/Declaration.cpp
-        formals/FormalList.cpp
-        types/Type.cpp
-        types/SimpleType.cpp
-        types/ArrayType.cpp
-        types/TypeIdentifier.cpp
-        statements/Statement.cpp
-        statements/StatementList.cpp
-        binary_operator/BinaryOperator.cpp
-        expressions/expr_info/ExprInfo.cpp
-        base_elements/BaseElement.h
+        grammar/expressions/BinaryExpression.cpp
+        grammar/expressions/ArrayExpression.cpp
+        grammar/expressions/ArrayElementExpression.cpp
+        grammar/expressions/ArrayLengthExpression.cpp
+        grammar/expressions/ObjectExpression.cpp
+        grammar/expressions/NotExpression.cpp
+        grammar/expressions/ParenthesesExpression.cpp
+        grammar/expressions/IdentExpression.cpp
+        grammar/expressions/NumberExpression.cpp
+        grammar/expressions/ThisExpression.cpp
+        grammar/expressions/BoolExpression.cpp
+        grammar/expressions/MethodInvokationExpression.cpp
+        grammar/lvalues/SimpleLvalue.cpp
+        grammar/lvalues/ArrayLvalue.cpp
+        grammar/expressions/ExpressionList.cpp
+        grammar/method_invokation/MethodInvokation.cpp
+        grammar/statements/AssertStatement.cpp
+        grammar/statements/LocalVariableDeclarationStatement.cpp
+        grammar/statements/ScopeStatement.cpp
+        grammar/statements/IfStatement.cpp
+        grammar/statements/IfElseStatement.cpp
+        grammar/statements/WhileStatement.cpp
+        grammar/statements/SoutStatement.cpp
+        grammar/statements/DefinitionStatement.cpp
+        grammar/statements/ReturnStatement.cpp
+        grammar/statements/MethodInvokationStatement.cpp
+        grammar/main_structures/Program.cpp
+        grammar/main_structures/MainClass.cpp
+        grammar/declarations/ClassDeclarationList.cpp
+        grammar/declarations/DeclarationList.cpp
+        grammar/declarations/MethodDeclaration.cpp
+        grammar/declarations/VariableDeclaration.cpp
+        grammar/declarations/LocalVariableDeclaration.cpp
+        grammar/declarations/ClassDeclaration.cpp
+        grammar/declarations/Declaration.cpp
+        grammar/formals/FormalList.cpp
+        grammar/types/Type.cpp
+        grammar/types/SimpleType.cpp
+        grammar/types/ArrayType.cpp
+        grammar/types/TypeIdentifier.cpp
+        grammar/statements/Statement.cpp
+        grammar/statements/StatementList.cpp
+        grammar/binary_operator/BinaryOperator.cpp
+        grammar/expressions/expr_info/ExprInfo.cpp
+        grammar/base_elements/BaseElement.h
         visitors/Visitor.cpp
         visitors/Visitor.h
-        declarations/CommonDeclaration.cpp
+        grammar/declarations/CommonDeclaration.cpp
         visitors/PrintVisitor.cpp
-        visitors/PrintVisitor.h symbol_table/ScopeLayer.cpp symbol_table/ScopeLayer.h symbol_table/Symbol.cpp symbol_table/Symbol.h objects/BasicType.cpp objects/BasicType.h objects/PrimitiveType.cpp objects/PrimitiveType.h objects/UninitObject.cpp objects/UninitObject.h visitors/TemplateVisitor.cpp visitors/TemplateVisitor.h visitors/SymbolTreeVisitor.cpp visitors/SymbolTreeVisitor.h symbol_table/ClassSymbolTree.cpp symbol_table/ClassSymbolTree.h objects/ObjectType.cpp objects/ObjectType.h objects/MethodType.cpp objects/MethodType.h objects/ClassType.cpp objects/ClassType.h)
+        visitors/PrintVisitor.h symbol_table/ScopeLayer.cpp symbol_table/ScopeLayer.h symbol_table/Symbol.cpp symbol_table/Symbol.h object_types/BasicType.cpp object_types/BasicType.h object_types/PrimitiveType.cpp object_types/PrimitiveType.h object_types/UninitObject.cpp object_types/UninitObject.h visitors/TemplateVisitor.cpp visitors/TemplateVisitor.h visitors/SymbolTreeVisitor.cpp visitors/SymbolTreeVisitor.h symbol_table/ClassSymbolTree.cpp symbol_table/ClassSymbolTree.h object_types/ObjectType.cpp object_types/ObjectType.h object_types/MethodType.cpp object_types/MethodType.h object_types/ClassType.cpp object_types/ClassType.h object_types/VoidType.cpp object_types/VoidType.h function_mechanisms/FrameEmulator.cpp function_mechanisms/FrameEmulator.h function_mechanisms/FunctionTable.cpp function_mechanisms/FunctionTable.h objects/BasicObject.cpp objects/BasicObject.h visitors/MethodCallVisitor.cpp visitors/MethodCallVisitor.h objects/Object.cpp objects/Object.h objects/Array.cpp objects/Array.h)
 target_include_directories(ParserExample PRIVATE ${ParserExample_SOURCE_DIR})
 
 

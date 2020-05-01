@@ -1,10 +1,10 @@
 #pragma once
 
 #include "Symbol.h"
-#include "objects/BasicType.h"
+#include "object_types/BasicType.h"
 #include <memory>
-#include <objects/ObjectType.h>
-#include <types/Type.h>
+#include <object_types/ObjectType.h>
+#include <grammar/types/Type.h>
 #include <unordered_map>
 #include <vector>
 
@@ -20,7 +20,7 @@ public:
   bool Has(Symbol symbol);
 
   void AddChild(ScopeLayer * child);
-  void AttachParent();
+  // void AttachParent();
   ~ScopeLayer();
 
   ScopeLayer * GetChild(size_t index);

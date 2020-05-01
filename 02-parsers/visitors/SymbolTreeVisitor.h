@@ -2,7 +2,7 @@
 
 #include "Visitor.h"
 #include <fstream>
-#include <objects/ClassType.h>
+#include <object_types/ClassType.h>
 #include <symbol_table/ClassSymbolTree.h>
 
 class SymbolTreeVisitor: public Visitor {
@@ -58,14 +58,25 @@ public:
   void Visit(BaseElement* visited) override;
 
   ClassSymbolTree* GetMain();
+  MainClass* GetMainClass();
+  Symbol GetMainName();
   void PrintTree(const std::string& file_name);
 
 private:
+  friend class MethodCallVisitor;
+  friend class Driver;
   std::unordered_map<Symbol, ClassSymbolTree*> classes_symbol_trees_;
   std::unordered_map<Symbol, ClassType*> classes_;
   ClassSymbolTree* current_class_;
+  MainClass* main_Class_;
+  Symbol main_name_ = Symbol("");
   ScopeLayer * current_layer_;
   BasicType *GetBasicType(Type *type);
   ClassType *GetClassType(ClassDeclaration *visited);
+  ClassType *GetClassType(MainClass *visited);
+  // throws exception
+  void CheckType(std::string type);
+  // throws exception
+  void CheckName(std::string name);
   std::ofstream stream_;
 };

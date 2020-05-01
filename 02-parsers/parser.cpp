@@ -1,4 +1,4 @@
-// A Bison parser, made by GNU Bison 3.5.2.
+// A Bison parser, made by GNU Bison 3.5.4.
 
 // Skeleton implementation for Bison LALR(1) parsers in C++
 
@@ -340,11 +340,11 @@ namespace yy {
         value.YY_MOVE_OR_COPY< VariableDeclaration* > (YY_MOVE (that.value));
         break;
 
-      case 42: // "number"
+      case 43: // "number"
         value.YY_MOVE_OR_COPY< int > (YY_MOVE (that.value));
         break;
 
-      case 41: // "identifier"
+      case 42: // "identifier"
         value.YY_MOVE_OR_COPY< std::string > (YY_MOVE (that.value));
         break;
 
@@ -448,11 +448,11 @@ namespace yy {
         value.move< VariableDeclaration* > (YY_MOVE (that.value));
         break;
 
-      case 42: // "number"
+      case 43: // "number"
         value.move< int > (YY_MOVE (that.value));
         break;
 
-      case 41: // "identifier"
+      case 42: // "identifier"
         value.move< std::string > (YY_MOVE (that.value));
         break;
 
@@ -556,11 +556,11 @@ namespace yy {
         value.copy< VariableDeclaration* > (that.value);
         break;
 
-      case 42: // "number"
+      case 43: // "number"
         value.copy< int > (that.value);
         break;
 
-      case 41: // "identifier"
+      case 42: // "identifier"
         value.copy< std::string > (that.value);
         break;
 
@@ -663,11 +663,11 @@ namespace yy {
         value.move< VariableDeclaration* > (that.value);
         break;
 
-      case 42: // "number"
+      case 43: // "number"
         value.move< int > (that.value);
         break;
 
-      case 41: // "identifier"
+      case 42: // "identifier"
         value.move< std::string > (that.value);
         break;
 
@@ -710,146 +710,146 @@ namespace yy {
         << yysym.location << ": ";
     switch (yytype)
     {
-      case 41: // "identifier"
-#line 113 "parser.y"
+      case 42: // "identifier"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < std::string > (); }
 #line 717 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
-      case 42: // "number"
-#line 113 "parser.y"
+      case 43: // "number"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < int > (); }
 #line 723 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 45: // expr
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < Expression* > (); }
 #line 729 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 46: // unit
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < Program* > (); }
 #line 735 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 47: // main_class
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < MainClass* > (); }
 #line 741 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 48: // class_declarations
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < ClassDeclarationList* > (); }
 #line 747 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 49: // class_declaration
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < ClassDeclaration* > (); }
 #line 753 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 50: // statements
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < StatementList* > (); }
 #line 759 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 51: // statement
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < Statement* > (); }
 #line 765 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 52: // declarations
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < DeclarationList* > (); }
 #line 771 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 53: // declaration
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < Declaration* > (); }
 #line 777 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 54: // variable_declaration
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < VariableDeclaration* > (); }
 #line 783 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 55: // method_declaration
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < MethodDeclaration* > (); }
 #line 789 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 56: // type
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < Type* > (); }
 #line 795 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 57: // formals
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < FormalList* > (); }
 #line 801 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 58: // following_formals
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < FormalList* > (); }
 #line 807 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 59: // simple_type
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < SimpleType* > (); }
 #line 813 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 60: // array_type
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < ArrayType* > (); }
 #line 819 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 61: // type_identifier
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < TypeIdentifier* > (); }
 #line 825 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 62: // local_variable_declaration
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < LocalVariableDeclaration* > (); }
 #line 831 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 63: // method_invocation
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < MethodInvokation* > (); }
 #line 837 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 64: // following_exprs
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < ExpressionList* > (); }
 #line 843 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 65: // lvalue
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < Lvalue* > (); }
 #line 849 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
 
       case 66: // binary_operator
-#line 113 "parser.y"
+#line 114 "parser.y"
                  { yyo << yysym.value.template as < BinaryOperator* > (); }
 #line 855 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
         break;
@@ -1154,11 +1154,11 @@ namespace yy {
         yylhs.value.emplace< VariableDeclaration* > ();
         break;
 
-      case 42: // "number"
+      case 43: // "number"
         yylhs.value.emplace< int > ();
         break;
 
-      case 41: // "identifier"
+      case 42: // "identifier"
         yylhs.value.emplace< std::string > ();
         break;
 
@@ -1183,413 +1183,415 @@ namespace yy {
           switch (yyn)
             {
   case 2:
-#line 117 "parser.y"
+#line 118 "parser.y"
                                     { yylhs.value.as < Program* > () = new Program(yystack_[1].value.as < MainClass* > (), yystack_[0].value.as < ClassDeclarationList* > ()); driver.program = yylhs.value.as < Program* > (); }
 #line 1189 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 3:
-#line 119 "parser.y"
+#line 120 "parser.y"
                                                                            { yylhs.value.as < MainClass* > () = new MainClass(yystack_[8].value.as < std::string > (), yystack_[2].value.as < StatementList* > ()); }
 #line 1195 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 4:
-#line 122 "parser.y"
+#line 123 "parser.y"
                { yylhs.value.as < ClassDeclarationList* > () = new ClassDeclarationList(); }
 #line 1201 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 5:
-#line 123 "parser.y"
+#line 124 "parser.y"
                                                { yystack_[1].value.as < ClassDeclarationList* > ()->AddClassDeclaration(yystack_[0].value.as < ClassDeclaration* > ()); yylhs.value.as < ClassDeclarationList* > () = yystack_[1].value.as < ClassDeclarationList* > (); }
 #line 1207 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 6:
-#line 126 "parser.y"
+#line 127 "parser.y"
                { yylhs.value.as < StatementList* > () = new StatementList(); }
 #line 1213 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 7:
-#line 127 "parser.y"
+#line 128 "parser.y"
                                { yystack_[1].value.as < StatementList* > ()->AddStatement(yystack_[0].value.as < Statement* > ()); yylhs.value.as < StatementList* > () = yystack_[1].value.as < StatementList* > (); }
 #line 1219 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 8:
-#line 129 "parser.y"
+#line 130 "parser.y"
                                                              { yylhs.value.as < ClassDeclaration* > () = new ClassDeclaration(yystack_[3].value.as < std::string > (), yystack_[1].value.as < DeclarationList* > ()); }
 #line 1225 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 9:
-#line 130 "parser.y"
+#line 131 "parser.y"
                                                                                  { yylhs.value.as < ClassDeclaration* > () = new ClassDeclaration(yystack_[5].value.as < std::string > (), yystack_[3].value.as < std::string > (), yystack_[1].value.as < DeclarationList* > ()); }
 #line 1231 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 10:
-#line 132 "parser.y"
+#line 133 "parser.y"
                        { yylhs.value.as < DeclarationList* > () = new DeclarationList(); }
 #line 1237 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 11:
-#line 133 "parser.y"
+#line 134 "parser.y"
                                    { yystack_[1].value.as < DeclarationList* > ()->AddDeclaration(yystack_[0].value.as < Declaration* > ()); yylhs.value.as < DeclarationList* > () = yystack_[1].value.as < DeclarationList* > (); }
 #line 1243 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 12:
-#line 135 "parser.y"
+#line 136 "parser.y"
                                   { yylhs.value.as < Declaration* > () = new Declaration(yystack_[0].value.as < VariableDeclaration* > ()); }
 #line 1249 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 13:
-#line 136 "parser.y"
+#line 137 "parser.y"
                              { yylhs.value.as < Declaration* > () = new Declaration(yystack_[0].value.as < MethodDeclaration* > ()); }
 #line 1255 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 14:
-#line 138 "parser.y"
+#line 139 "parser.y"
                                                                           { yylhs.value.as < MethodDeclaration* > () = new MethodDeclaration(yystack_[6].value.as < Type* > (), yystack_[5].value.as < std::string > (), yystack_[1].value.as < StatementList* > ()); }
 #line 1261 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 15:
-#line 139 "parser.y"
+#line 140 "parser.y"
                                                                         { yylhs.value.as < MethodDeclaration* > () = new MethodDeclaration(yystack_[7].value.as < Type* > (), yystack_[6].value.as < std::string > (), yystack_[4].value.as < FormalList* > (), yystack_[1].value.as < StatementList* > ()); }
 #line 1267 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 16:
-#line 141 "parser.y"
+#line 142 "parser.y"
                                             { yylhs.value.as < VariableDeclaration* > () = new VariableDeclaration(yystack_[2].value.as < Type* > (), yystack_[1].value.as < std::string > ()); }
 #line 1273 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 17:
-#line 143 "parser.y"
+#line 144 "parser.y"
                                              { yystack_[0].value.as < FormalList* > ()->AddFormal(yystack_[2].value.as < Type* > (), yystack_[1].value.as < std::string > ()); yylhs.value.as < FormalList* > () = yystack_[0].value.as < FormalList* > (); }
 #line 1279 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 18:
-#line 146 "parser.y"
+#line 147 "parser.y"
                { yylhs.value.as < FormalList* > () = new FormalList(); }
 #line 1285 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 19:
-#line 147 "parser.y"
+#line 148 "parser.y"
                                                   { yystack_[0].value.as < FormalList* > ()->AddFormal(yystack_[2].value.as < Type* > (), yystack_[1].value.as < std::string > ()); yylhs.value.as < FormalList* > () = yystack_[0].value.as < FormalList* > (); }
 #line 1291 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 20:
-#line 150 "parser.y"
+#line 151 "parser.y"
                     { yylhs.value.as < Type* > () = new Type(yystack_[0].value.as < SimpleType* > ()); }
 #line 1297 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 21:
-#line 151 "parser.y"
+#line 152 "parser.y"
                      { yylhs.value.as < Type* > () = new Type(yystack_[0].value.as < ArrayType* > ()); }
 #line 1303 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 22:
-#line 154 "parser.y"
+#line 155 "parser.y"
               { yylhs.value.as < SimpleType* > () = new SimpleType("int"); }
 #line 1309 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 23:
-#line 155 "parser.y"
+#line 156 "parser.y"
                     { yylhs.value.as < SimpleType* > () = new SimpleType("boolean"); }
 #line 1315 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 24:
-#line 156 "parser.y"
+#line 157 "parser.y"
                  { yylhs.value.as < SimpleType* > () = new SimpleType("void"); }
 #line 1321 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 25:
-#line 157 "parser.y"
+#line 158 "parser.y"
                           { yylhs.value.as < SimpleType* > () = new SimpleType(yystack_[0].value.as < TypeIdentifier* > ()); }
 #line 1327 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 26:
-#line 160 "parser.y"
+#line 161 "parser.y"
                             { yylhs.value.as < ArrayType* > () = new ArrayType(yystack_[2].value.as < SimpleType* > ()); }
 #line 1333 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 27:
-#line 163 "parser.y"
+#line 164 "parser.y"
                      { yylhs.value.as < TypeIdentifier* > () = new TypeIdentifier(yystack_[0].value.as < std::string > ()); }
 #line 1339 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 28:
-#line 165 "parser.y"
+#line 166 "parser.y"
                                      { yylhs.value.as < Statement* > () = new AssertStatement(yystack_[2].value.as < Expression* > ()); }
 #line 1345 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 29:
-#line 166 "parser.y"
+#line 167 "parser.y"
                                            { yylhs.value.as < Statement* > () = new LocalVariableDeclarationStatement(yystack_[0].value.as < LocalVariableDeclaration* > ()); }
 #line 1351 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 30:
-#line 167 "parser.y"
+#line 168 "parser.y"
                                    { yylhs.value.as < Statement* > () = new ScopeStatement(yystack_[1].value.as < StatementList* > ()); }
 #line 1357 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 31:
-#line 168 "parser.y"
+#line 169 "parser.y"
                                              { yylhs.value.as < Statement* > () = new IfStatement(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Statement* > ()); }
 #line 1363 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 32:
-#line 169 "parser.y"
+#line 170 "parser.y"
                                                               { yylhs.value.as < Statement* > () = new IfElseStatement(yystack_[4].value.as < Expression* > (), yystack_[2].value.as < Statement* > (), yystack_[0].value.as < Statement* > ()); }
 #line 1369 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 33:
-#line 170 "parser.y"
+#line 171 "parser.y"
                                                  { yylhs.value.as < Statement* > () = new WhileStatement(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Statement* > ()); }
 #line 1375 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 34:
-#line 171 "parser.y"
+#line 172 "parser.y"
                                          { yylhs.value.as < Statement* > () = new SoutStatement(yystack_[2].value.as < Expression* > ()); }
 #line 1381 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 35:
-#line 172 "parser.y"
+#line 173 "parser.y"
                                      { yylhs.value.as < Statement* > () = new DefinitionStatement(yystack_[3].value.as < Lvalue* > (), yystack_[1].value.as < Expression* > ()); }
 #line 1387 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 36:
-#line 173 "parser.y"
+#line 174 "parser.y"
                                    { yylhs.value.as < Statement* > () = new ReturnStatement(yystack_[1].value.as < Expression* > ()); }
 #line 1393 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 37:
-#line 174 "parser.y"
+#line 175 "parser.y"
                                       { yylhs.value.as < Statement* > () = new MethodInvokationStatement(yystack_[1].value.as < MethodInvokation* > ()); }
 #line 1399 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 38:
-#line 176 "parser.y"
+#line 177 "parser.y"
                                                  { yylhs.value.as < LocalVariableDeclaration* > () = new LocalVariableDeclaration(yystack_[0].value.as < VariableDeclaration* > ()); }
 #line 1405 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 39:
-#line 178 "parser.y"
+#line 179 "parser.y"
                                                  { yylhs.value.as < MethodInvokation* > () = new MethodInvokation(yystack_[4].value.as < Expression* > (), yystack_[2].value.as < std::string > ()); }
 #line 1411 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 40:
-#line 179 "parser.y"
+#line 180 "parser.y"
                                                                      { yylhs.value.as < MethodInvokation* > () = new MethodInvokation(yystack_[6].value.as < Expression* > (), yystack_[4].value.as < std::string > (), yystack_[2].value.as < Expression* > (), yystack_[1].value.as < ExpressionList* > ()); }
 #line 1417 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 41:
-#line 182 "parser.y"
+#line 183 "parser.y"
                { yylhs.value.as < ExpressionList* > () = new ExpressionList(); }
 #line 1423 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 42:
-#line 183 "parser.y"
+#line 184 "parser.y"
                                    { yystack_[0].value.as < ExpressionList* > ()->AddExpression(yystack_[1].value.as < Expression* > ()); yylhs.value.as < ExpressionList* > () = yystack_[0].value.as < ExpressionList* > (); }
 #line 1429 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 43:
-#line 187 "parser.y"
+#line 188 "parser.y"
                      { yylhs.value.as < Lvalue* > () = new SimpleLvalue(yystack_[0].value.as < std::string > ()); }
 #line 1435 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 44:
-#line 188 "parser.y"
-                                     { yylhs.value.as < Lvalue* > () = new ArrayLvalue(yystack_[3].value.as < std::string > (), yystack_[1].value.as < Expression* > ()); }
-#line 1441 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 189 "parser.y"
+                                     {
+	 yylhs.value.as < Lvalue* > () = new ArrayLvalue(yystack_[3].value.as < std::string > (), yystack_[1].value.as < Expression* > ());
+	  }
+#line 1443 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 45:
-#line 190 "parser.y"
+#line 193 "parser.y"
                                    {
 		yylhs.value.as < Expression* > () = new BinaryExpression(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > (), yystack_[1].value.as < BinaryOperator* > ());
 }
-#line 1449 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1451 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 46:
-#line 193 "parser.y"
+#line 196 "parser.y"
                              {
 		yylhs.value.as < Expression* > () = new ArrayElementExpression(yystack_[3].value.as < Expression* > (), yystack_[1].value.as < Expression* > ());
 	}
-#line 1457 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1459 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 47:
-#line 196 "parser.y"
+#line 199 "parser.y"
                             {
 		yylhs.value.as < Expression* > () = new ArrayLengthExpression(yystack_[2].value.as < Expression* > ());
 	}
-#line 1465 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1467 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 48:
-#line 199 "parser.y"
+#line 202 "parser.y"
                                          {
 		yylhs.value.as < Expression* > () = new ArrayExpression(yystack_[3].value.as < SimpleType* > (), yystack_[1].value.as < Expression* > ());
 	}
-#line 1473 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1475 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 49:
-#line 202 "parser.y"
+#line 205 "parser.y"
                                         {
 		yylhs.value.as < Expression* > () = new ObjectExpression(yystack_[2].value.as < TypeIdentifier* > ());
 	}
-#line 1481 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1483 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 50:
-#line 205 "parser.y"
+#line 208 "parser.y"
                    { yylhs.value.as < Expression* > () = new NotExpression(yystack_[0].value.as < Expression* > ()); }
-#line 1487 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1489 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 51:
-#line 206 "parser.y"
+#line 209 "parser.y"
                        { yylhs.value.as < Expression* > () = new ParenthesesExpression(yystack_[1].value.as < Expression* > ()); }
-#line 1493 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1495 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 52:
-#line 207 "parser.y"
+#line 210 "parser.y"
                         { yylhs.value.as < Expression* > () = new IdentExpression(yystack_[0].value.as < std::string > ()); }
-#line 1499 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1501 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 53:
-#line 208 "parser.y"
+#line 211 "parser.y"
                     { yylhs.value.as < Expression* > () = new NumberExpression(yystack_[0].value.as < int > ()); }
-#line 1505 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1507 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 54:
-#line 209 "parser.y"
+#line 212 "parser.y"
                  { yylhs.value.as < Expression* > () = new ThisExpression("this"); }
-#line 1511 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1513 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 55:
-#line 210 "parser.y"
+#line 213 "parser.y"
                  { yylhs.value.as < Expression* > () = new BoolExpression("true"); }
-#line 1517 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1519 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 56:
-#line 211 "parser.y"
+#line 214 "parser.y"
                   { yylhs.value.as < Expression* > () = new BoolExpression("false"); }
-#line 1523 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1525 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 57:
-#line 212 "parser.y"
+#line 215 "parser.y"
                             { yylhs.value.as < Expression* > () = new MethodInvokationExpression(yystack_[0].value.as < MethodInvokation* > ()); }
-#line 1529 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1531 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 58:
-#line 216 "parser.y"
+#line 219 "parser.y"
                { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(AndOp); }
-#line 1535 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1537 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 59:
-#line 217 "parser.y"
+#line 220 "parser.y"
                  { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(OrOp); }
-#line 1541 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1543 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 60:
-#line 218 "parser.y"
+#line 221 "parser.y"
                  { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(LessOp); }
-#line 1547 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1549 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 61:
-#line 219 "parser.y"
+#line 222 "parser.y"
                 { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(GreaterOp); }
-#line 1553 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1555 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 62:
-#line 220 "parser.y"
+#line 223 "parser.y"
                   { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(EqualOp); }
-#line 1559 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1561 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 63:
-#line 221 "parser.y"
+#line 224 "parser.y"
                 { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(AddOp); }
-#line 1565 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1567 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 64:
-#line 222 "parser.y"
+#line 225 "parser.y"
                 { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(SubtractOp); }
-#line 1571 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1573 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 65:
-#line 223 "parser.y"
+#line 226 "parser.y"
                { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(MultiplyOp); }
-#line 1577 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1579 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 66:
-#line 224 "parser.y"
+#line 227 "parser.y"
                { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(DivOp); }
-#line 1583 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1585 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
   case 67:
-#line 225 "parser.y"
+#line 228 "parser.y"
                { yylhs.value.as < BinaryOperator* > () = new BinaryOperator(ModOp); }
-#line 1589 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1591 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
     break;
 
 
-#line 1593 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 1595 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
 
             default:
               break;
@@ -1860,28 +1862,28 @@ namespace yy {
   }
 
 
-  const signed char parser::yypact_ninf_ = -94;
+  const signed char parser::yypact_ninf_ = -55;
 
   const signed char parser::yytable_ninf_ = -44;
 
   const short
   parser::yypact_[] =
   {
-     -10,   -31,     9,   -94,     0,   -94,    -6,    21,   -15,   -94,
-       2,    24,    13,   -94,    15,    43,    53,    47,   -94,   -94,
-     -94,   -94,   -94,    -8,   -94,   -94,   -94,   -94,    29,    23,
-     -94,   -94,   -94,   107,    30,    56,    34,   122,    38,    39,
-      22,   -94,   -94,    -8,   -94,   -94,    65,    48,    49,    22,
-      22,    40,   -94,   444,   -94,   -94,   -94,    64,    70,    51,
-     -94,   -94,   -94,    22,    22,   -94,   270,   -94,    50,    55,
-     147,   -94,    22,    22,   444,   369,    22,    20,   -94,   -94,
-     -94,   -94,   -94,   -94,   -94,   -94,   -94,   -94,    22,    22,
-     -94,    22,     6,   384,   399,   -94,    22,    52,   -94,   414,
-     429,   -94,   321,   -94,    58,   337,   444,   291,    82,    57,
-      59,    80,    85,   353,   -94,   252,   252,   -94,     8,   -94,
-     -94,   -94,    61,    91,   -94,   -94,   -94,    83,   -94,   -94,
-     304,   187,    -8,   -94,   -94,   252,    22,    67,   -94,    66,
-     227,   -94,   304,   -94,    61,   -94,   -94,   -94
+     -12,   -35,     9,   -55,    10,   -55,   -10,    15,   -22,   -55,
+     -15,    14,    25,   -55,   -19,    36,    29,    55,   -55,   -55,
+     -55,   -55,   -55,    43,   -55,   -55,   -55,   -55,    26,    28,
+     -55,   -55,   -55,   107,    35,    54,    46,    60,    50,    51,
+      22,   -55,   -55,    43,   -55,   -55,    77,    53,    56,    22,
+      22,    37,   -55,   446,   -55,   -55,   -55,    76,    78,    57,
+     -55,   -55,   -55,    22,    22,   -55,   274,   -55,    58,    59,
+     148,   -55,    22,    22,   446,   371,    22,   -18,   -55,   -55,
+     -55,   -55,   -55,   -55,   -55,   -55,   -55,   -55,    22,    22,
+     -55,    22,    -3,   386,   401,   -55,    22,    63,   -55,   416,
+     431,   -55,   323,   -55,    61,   339,   446,   295,    93,    64,
+      67,    91,    95,   355,   -55,   255,   255,   -55,     8,   -55,
+     -55,   -55,    82,   113,   -55,   -55,   -55,   102,   -55,   -55,
+     308,   189,    43,   -55,   -55,   255,    22,    88,   -55,    85,
+     230,   -55,   308,   -55,    82,   -55,   -55,   -55
   };
 
   const signed char
@@ -1907,9 +1909,9 @@ namespace yy {
   const signed char
   parser::yypgoto_[] =
   {
-     -94,   -36,   -94,   -94,   -94,   -94,   -43,   -93,    79,   -94,
-     -13,   -94,   -23,   -94,   -21,    81,   -94,    84,   -94,   -32,
-     -17,   -94,   -94
+     -55,   -36,   -55,   -55,   -55,   -55,   -43,   -54,    96,   -55,
+     -11,   -55,   -23,   -55,   -14,    89,   -55,    92,   -55,   -32,
+      -8,   -55,   -55
   };
 
   const short
@@ -1923,129 +1925,129 @@ namespace yy {
   const short
   parser::yytable_[] =
   {
-      34,    57,    70,    26,    66,    20,    21,    22,     1,     5,
-       4,     7,     8,    74,    75,    41,    42,    43,    44,    20,
-      21,    22,   127,   128,    26,    10,    11,    93,    94,    41,
-      42,    43,    44,    24,    49,    13,    99,   100,    57,    12,
-     102,   103,   141,    14,   108,    50,   129,    24,    49,    65,
-      52,    15,   105,   106,    18,   107,    17,   -43,    32,    50,
-     113,   104,    36,    65,    52,    19,    20,    21,    22,   109,
-      35,    59,    60,    23,    61,    63,    64,    71,   131,    76,
-      90,   -27,   130,    57,    57,    72,    73,    91,    92,    96,
-     114,   140,    97,   121,    24,   118,   124,   123,   122,    57,
-     142,   125,   134,    57,   132,   143,   135,   144,    57,   139,
-      38,    37,    39,    40,    41,    42,    43,    44,    45,    46,
-      20,    21,    22,   147,    68,   146,     0,    69,     0,    47,
-       0,    48,     0,    49,    62,    20,    21,    22,     0,     0,
-       0,     0,    23,     0,    50,     0,     0,     0,    51,    52,
-      38,     0,    39,    40,    41,    42,    43,    44,    45,    98,
-      20,    21,    22,    24,     0,     0,     0,     0,     0,    47,
-       0,    48,     0,    49,     0,     0,     0,     0,     0,     0,
-       0,     0,     0,     0,    50,     0,     0,     0,    51,    52,
-      38,     0,    39,    40,    41,    42,    43,    44,    45,   138,
-      20,    21,    22,     0,     0,     0,     0,     0,     0,    47,
-       0,    48,     0,    49,     0,     0,     0,     0,     0,     0,
-       0,     0,     0,     0,    50,     0,     0,     0,    51,    52,
-      38,     0,    39,    40,    41,    42,    43,    44,    45,   145,
-      20,    21,    22,     0,     0,     0,     0,     0,     0,    47,
-       0,    48,     0,    49,     0,    38,     0,    39,    40,    41,
-      42,    43,    44,    45,    50,    20,    21,    22,    51,    52,
-       0,     0,     0,     0,    47,     0,    48,     0,    49,     0,
-       0,     0,     0,     0,     0,     0,    95,     0,     0,    50,
-       0,     0,     0,    51,    52,    77,     0,    78,    79,    80,
-      81,    82,    83,    84,    85,    86,    87,   120,     0,    88,
-       0,     0,     0,     0,     0,     0,    77,     0,    78,    79,
-      80,    81,    82,    83,    84,    85,    86,    87,     0,    77,
-      88,    78,    79,    80,    81,    82,    83,    84,    85,    86,
-      87,     0,     0,    88,     0,     0,    77,   136,    78,    79,
-      80,    81,    82,    83,    84,    85,    86,    87,     0,     0,
-      88,   117,    77,     0,    78,    79,    80,    81,    82,    83,
-      84,    85,    86,    87,     0,     0,    88,   119,    77,     0,
+      34,    57,    70,   103,    66,    26,     1,     4,     8,     5,
+      20,    21,    22,    74,    75,    41,    42,    43,    44,    10,
+      11,     7,    12,    17,   104,    13,    26,    93,    94,    41,
+      42,    43,    44,    14,    49,   108,    99,   100,    57,    24,
+     102,    19,    20,    21,    22,    50,   129,    18,    49,    23,
+      65,    52,   105,   106,   -43,   107,    20,    21,    22,    50,
+     113,   127,   128,    15,    65,    52,    32,    36,    35,   109,
+      60,    24,    62,    20,    21,    22,    76,    59,   131,   -27,
+      23,   141,   130,    57,    57,    24,    61,    63,    64,    71,
+      72,   140,    90,    73,    92,    91,    97,    96,   118,    57,
+     142,   114,    24,    57,   121,   123,   122,   124,    57,   139,
+      38,   125,    39,    40,    41,    42,    43,    44,    45,    46,
+      20,    21,    22,   132,   134,   135,   143,   144,    37,    47,
+     147,    48,    68,    49,   146,    69,     0,     0,     0,     0,
+       0,     0,     0,     0,    50,     0,     0,     0,     0,    51,
+      52,    38,     0,    39,    40,    41,    42,    43,    44,    45,
+      98,    20,    21,    22,     0,     0,     0,     0,     0,     0,
+      47,     0,    48,     0,    49,     0,     0,     0,     0,     0,
+       0,     0,     0,     0,     0,    50,     0,     0,     0,     0,
+      51,    52,    38,     0,    39,    40,    41,    42,    43,    44,
+      45,   138,    20,    21,    22,     0,     0,     0,     0,     0,
+       0,    47,     0,    48,     0,    49,     0,     0,     0,     0,
+       0,     0,     0,     0,     0,     0,    50,     0,     0,     0,
+       0,    51,    52,    38,     0,    39,    40,    41,    42,    43,
+      44,    45,   145,    20,    21,    22,     0,     0,     0,     0,
+       0,     0,    47,     0,    48,     0,    49,     0,    38,     0,
+      39,    40,    41,    42,    43,    44,    45,    50,    20,    21,
+      22,     0,    51,    52,     0,     0,     0,    47,     0,    48,
+       0,    49,     0,     0,     0,     0,     0,     0,     0,     0,
+      95,     0,    50,     0,     0,     0,     0,    51,    52,    77,
+       0,    78,    79,    80,    81,    82,    83,    84,    85,    86,
+      87,   120,     0,    88,     0,     0,     0,     0,     0,     0,
+      77,     0,    78,    79,    80,    81,    82,    83,    84,    85,
+      86,    87,     0,    77,    88,    78,    79,    80,    81,    82,
+      83,    84,    85,    86,    87,     0,     0,    88,    77,   136,
       78,    79,    80,    81,    82,    83,    84,    85,    86,    87,
-       0,     0,    88,   126,    77,     0,    78,    79,    80,    81,
-      82,    83,    84,    85,    86,    87,     0,   101,    88,    77,
-       0,    78,    79,    80,    81,    82,    83,    84,    85,    86,
-      87,     0,   111,    88,    77,     0,    78,    79,    80,    81,
-      82,    83,    84,    85,    86,    87,     0,   112,    88,    77,
-       0,    78,    79,    80,    81,    82,    83,    84,    85,    86,
-      87,     0,   115,    88,    77,     0,    78,    79,    80,    81,
-      82,    83,    84,    85,    86,    87,     0,   116,    88,    77,
-       0,    78,    79,    80,    81,    82,    83,    84,    85,    86,
-      87,     0,     0,    88
+       0,     0,    88,   117,    77,     0,    78,    79,    80,    81,
+      82,    83,    84,    85,    86,    87,     0,     0,    88,   119,
+      77,     0,    78,    79,    80,    81,    82,    83,    84,    85,
+      86,    87,     0,     0,    88,   126,    77,     0,    78,    79,
+      80,    81,    82,    83,    84,    85,    86,    87,     0,   101,
+      88,    77,     0,    78,    79,    80,    81,    82,    83,    84,
+      85,    86,    87,     0,   111,    88,    77,     0,    78,    79,
+      80,    81,    82,    83,    84,    85,    86,    87,     0,   112,
+      88,    77,     0,    78,    79,    80,    81,    82,    83,    84,
+      85,    86,    87,     0,   115,    88,    77,     0,    78,    79,
+      80,    81,    82,    83,    84,    85,    86,    87,     0,   116,
+      88,    77,     0,    78,    79,    80,    81,    82,    83,    84,
+      85,    86,    87,     0,     0,    88
   };
 
   const short
   parser::yycheck_[] =
   {
-      23,    33,    45,    16,    40,    13,    14,    15,    18,     0,
-      41,    11,    18,    49,    50,     7,     8,     9,    10,    13,
-      14,    15,   115,   116,    37,     4,    41,    63,    64,     7,
-       8,     9,    10,    41,    26,    11,    72,    73,    70,    37,
-      76,    21,   135,    19,    38,    37,    38,    41,    26,    41,
-      42,    38,    88,    89,    11,    91,    41,    17,    11,    37,
-      96,    41,    39,    41,    42,    12,    13,    14,    15,    92,
-      41,    41,    16,    20,    40,    37,    37,    12,   121,    39,
-      16,    41,   118,   115,   116,    37,    37,    17,    37,    39,
-      38,   134,    37,    11,    41,    37,    16,    38,    41,   131,
-     136,    16,    11,   135,    43,    38,    23,    41,   140,   132,
-       3,    32,     5,     6,     7,     8,     9,    10,    11,    12,
-      13,    14,    15,   144,    43,   142,    -1,    43,    -1,    22,
-      -1,    24,    -1,    26,    12,    13,    14,    15,    -1,    -1,
-      -1,    -1,    20,    -1,    37,    -1,    -1,    -1,    41,    42,
-       3,    -1,     5,     6,     7,     8,     9,    10,    11,    12,
-      13,    14,    15,    41,    -1,    -1,    -1,    -1,    -1,    22,
-      -1,    24,    -1,    26,    -1,    -1,    -1,    -1,    -1,    -1,
-      -1,    -1,    -1,    -1,    37,    -1,    -1,    -1,    41,    42,
-       3,    -1,     5,     6,     7,     8,     9,    10,    11,    12,
-      13,    14,    15,    -1,    -1,    -1,    -1,    -1,    -1,    22,
-      -1,    24,    -1,    26,    -1,    -1,    -1,    -1,    -1,    -1,
-      -1,    -1,    -1,    -1,    37,    -1,    -1,    -1,    41,    42,
-       3,    -1,     5,     6,     7,     8,     9,    10,    11,    12,
-      13,    14,    15,    -1,    -1,    -1,    -1,    -1,    -1,    22,
-      -1,    24,    -1,    26,    -1,     3,    -1,     5,     6,     7,
-       8,     9,    10,    11,    37,    13,    14,    15,    41,    42,
-      -1,    -1,    -1,    -1,    22,    -1,    24,    -1,    26,    -1,
-      -1,    -1,    -1,    -1,    -1,    -1,    16,    -1,    -1,    37,
-      -1,    -1,    -1,    41,    42,    25,    -1,    27,    28,    29,
-      30,    31,    32,    33,    34,    35,    36,    16,    -1,    39,
-      -1,    -1,    -1,    -1,    -1,    -1,    25,    -1,    27,    28,
-      29,    30,    31,    32,    33,    34,    35,    36,    -1,    25,
-      39,    27,    28,    29,    30,    31,    32,    33,    34,    35,
-      36,    -1,    -1,    39,    -1,    -1,    25,    43,    27,    28,
-      29,    30,    31,    32,    33,    34,    35,    36,    -1,    -1,
-      39,    40,    25,    -1,    27,    28,    29,    30,    31,    32,
-      33,    34,    35,    36,    -1,    -1,    39,    40,    25,    -1,
+      23,    33,    45,    21,    40,    16,    18,    42,    18,     0,
+      13,    14,    15,    49,    50,     7,     8,     9,    10,     4,
+      42,    11,    37,    42,    42,    11,    37,    63,    64,     7,
+       8,     9,    10,    19,    26,    38,    72,    73,    70,    42,
+      76,    12,    13,    14,    15,    37,    38,    11,    26,    20,
+      42,    43,    88,    89,    17,    91,    13,    14,    15,    37,
+      96,   115,   116,    38,    42,    43,    11,    39,    42,    92,
+      16,    42,    12,    13,    14,    15,    39,    42,   121,    42,
+      20,   135,   118,   115,   116,    42,    40,    37,    37,    12,
+      37,   134,    16,    37,    37,    17,    37,    39,    37,   131,
+     136,    38,    42,   135,    11,    38,    42,    16,   140,   132,
+       3,    16,     5,     6,     7,     8,     9,    10,    11,    12,
+      13,    14,    15,    41,    11,    23,    38,    42,    32,    22,
+     144,    24,    43,    26,   142,    43,    -1,    -1,    -1,    -1,
+      -1,    -1,    -1,    -1,    37,    -1,    -1,    -1,    -1,    42,
+      43,     3,    -1,     5,     6,     7,     8,     9,    10,    11,
+      12,    13,    14,    15,    -1,    -1,    -1,    -1,    -1,    -1,
+      22,    -1,    24,    -1,    26,    -1,    -1,    -1,    -1,    -1,
+      -1,    -1,    -1,    -1,    -1,    37,    -1,    -1,    -1,    -1,
+      42,    43,     3,    -1,     5,     6,     7,     8,     9,    10,
+      11,    12,    13,    14,    15,    -1,    -1,    -1,    -1,    -1,
+      -1,    22,    -1,    24,    -1,    26,    -1,    -1,    -1,    -1,
+      -1,    -1,    -1,    -1,    -1,    -1,    37,    -1,    -1,    -1,
+      -1,    42,    43,     3,    -1,     5,     6,     7,     8,     9,
+      10,    11,    12,    13,    14,    15,    -1,    -1,    -1,    -1,
+      -1,    -1,    22,    -1,    24,    -1,    26,    -1,     3,    -1,
+       5,     6,     7,     8,     9,    10,    11,    37,    13,    14,
+      15,    -1,    42,    43,    -1,    -1,    -1,    22,    -1,    24,
+      -1,    26,    -1,    -1,    -1,    -1,    -1,    -1,    -1,    -1,
+      16,    -1,    37,    -1,    -1,    -1,    -1,    42,    43,    25,
+      -1,    27,    28,    29,    30,    31,    32,    33,    34,    35,
+      36,    16,    -1,    39,    -1,    -1,    -1,    -1,    -1,    -1,
+      25,    -1,    27,    28,    29,    30,    31,    32,    33,    34,
+      35,    36,    -1,    25,    39,    27,    28,    29,    30,    31,
+      32,    33,    34,    35,    36,    -1,    -1,    39,    25,    41,
       27,    28,    29,    30,    31,    32,    33,    34,    35,    36,
       -1,    -1,    39,    40,    25,    -1,    27,    28,    29,    30,
-      31,    32,    33,    34,    35,    36,    -1,    38,    39,    25,
-      -1,    27,    28,    29,    30,    31,    32,    33,    34,    35,
-      36,    -1,    38,    39,    25,    -1,    27,    28,    29,    30,
-      31,    32,    33,    34,    35,    36,    -1,    38,    39,    25,
-      -1,    27,    28,    29,    30,    31,    32,    33,    34,    35,
-      36,    -1,    38,    39,    25,    -1,    27,    28,    29,    30,
-      31,    32,    33,    34,    35,    36,    -1,    38,    39,    25,
-      -1,    27,    28,    29,    30,    31,    32,    33,    34,    35,
-      36,    -1,    -1,    39
+      31,    32,    33,    34,    35,    36,    -1,    -1,    39,    40,
+      25,    -1,    27,    28,    29,    30,    31,    32,    33,    34,
+      35,    36,    -1,    -1,    39,    40,    25,    -1,    27,    28,
+      29,    30,    31,    32,    33,    34,    35,    36,    -1,    38,
+      39,    25,    -1,    27,    28,    29,    30,    31,    32,    33,
+      34,    35,    36,    -1,    38,    39,    25,    -1,    27,    28,
+      29,    30,    31,    32,    33,    34,    35,    36,    -1,    38,
+      39,    25,    -1,    27,    28,    29,    30,    31,    32,    33,
+      34,    35,    36,    -1,    38,    39,    25,    -1,    27,    28,
+      29,    30,    31,    32,    33,    34,    35,    36,    -1,    38,
+      39,    25,    -1,    27,    28,    29,    30,    31,    32,    33,
+      34,    35,    36,    -1,    -1,    39
   };
 
   const signed char
   parser::yystos_[] =
   {
-       0,    18,    46,    47,    41,     0,    48,    11,    18,    49,
-       4,    41,    37,    11,    19,    38,    52,    41,    11,    12,
-      13,    14,    15,    20,    41,    53,    54,    55,    56,    59,
-      60,    61,    11,    50,    56,    41,    39,    52,     3,     5,
+       0,    18,    46,    47,    42,     0,    48,    11,    18,    49,
+       4,    42,    37,    11,    19,    38,    52,    42,    11,    12,
+      13,    14,    15,    20,    42,    53,    54,    55,    56,    59,
+      60,    61,    11,    50,    56,    42,    39,    52,     3,     5,
        6,     7,     8,     9,    10,    11,    12,    22,    24,    26,
-      37,    41,    42,    45,    51,    54,    62,    63,    65,    41,
-      16,    40,    12,    37,    37,    41,    45,    63,    59,    61,
+      37,    42,    43,    45,    51,    54,    62,    63,    65,    42,
+      16,    40,    12,    37,    37,    42,    45,    63,    59,    61,
       50,    12,    37,    37,    45,    45,    39,    25,    27,    28,
       29,    30,    31,    32,    33,    34,    35,    36,    39,    66,
       16,    17,    37,    45,    45,    16,    39,    37,    12,    45,
-      45,    38,    45,    21,    41,    45,    45,    45,    38,    56,
+      45,    38,    45,    21,    42,    45,    45,    45,    38,    56,
       57,    38,    38,    45,    38,    38,    38,    40,    37,    40,
-      16,    11,    41,    38,    16,    16,    40,    51,    51,    38,
-      45,    50,    43,    58,    11,    23,    43,    64,    12,    56,
-      50,    51,    45,    38,    41,    12,    64,    58
+      16,    11,    42,    38,    16,    16,    40,    51,    51,    38,
+      45,    50,    41,    58,    11,    23,    41,    64,    12,    56,
+      50,    51,    45,    38,    42,    12,    64,    58
   };
 
   const signed char
@@ -2085,26 +2087,27 @@ namespace yy {
   "\";\"", "\"=\"", "\"class\"", "\"extends\"", "\"public\"", "\"length\"",
   "\"if\"", "\"else\"", "\"while\"", "\".\"", "\"!\"", "\"&&\"", "\"||\"",
   "\"<\"", "\">\"", "\"==\"", "\"-\"", "\"+\"", "\"*\"", "\"/\"", "\"%\"",
-  "\"(\"", "\")\"", "\"[\"", "\"]\"", "\"identifier\"", "\"number\"",
-  "\",\"", "$accept", "expr", "unit", "main_class", "class_declarations",
-  "class_declaration", "statements", "statement", "declarations",
-  "declaration", "variable_declaration", "method_declaration", "type",
-  "formals", "following_formals", "simple_type", "array_type",
-  "type_identifier", "local_variable_declaration", "method_invocation",
-  "following_exprs", "lvalue", "binary_operator", YY_NULLPTR
+  "\"(\"", "\")\"", "\"[\"", "\"]\"", "\",\"", "\"identifier\"",
+  "\"number\"", "$accept", "expr", "unit", "main_class",
+  "class_declarations", "class_declaration", "statements", "statement",
+  "declarations", "declaration", "variable_declaration",
+  "method_declaration", "type", "formals", "following_formals",
+  "simple_type", "array_type", "type_identifier",
+  "local_variable_declaration", "method_invocation", "following_exprs",
+  "lvalue", "binary_operator", YY_NULLPTR
   };
 
 #if YYDEBUG
   const unsigned char
   parser::yyrline_[] =
   {
-       0,   117,   117,   119,   122,   123,   126,   127,   129,   130,
-     132,   133,   135,   136,   138,   139,   141,   143,   146,   147,
-     150,   151,   154,   155,   156,   157,   160,   163,   165,   166,
-     167,   168,   169,   170,   171,   172,   173,   174,   176,   178,
-     179,   182,   183,   187,   188,   190,   193,   196,   199,   202,
-     205,   206,   207,   208,   209,   210,   211,   212,   216,   217,
-     218,   219,   220,   221,   222,   223,   224,   225
+       0,   118,   118,   120,   123,   124,   127,   128,   130,   131,
+     133,   134,   136,   137,   139,   140,   142,   144,   147,   148,
+     151,   152,   155,   156,   157,   158,   161,   164,   166,   167,
+     168,   169,   170,   171,   172,   173,   174,   175,   177,   179,
+     180,   183,   184,   188,   189,   193,   196,   199,   202,   205,
+     208,   209,   210,   211,   212,   213,   214,   215,   219,   220,
+     221,   222,   223,   224,   225,   226,   227,   228
   };
 
   // Print the state stack on the debug stream.
@@ -2138,9 +2141,9 @@ namespace yy {
 
 
 } // yy
-#line 2142 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
+#line 2145 "/home/timur/CLionProjects/untitled9/02-parsers/parser.cpp"
 
-#line 235 "parser.y"
+#line 238 "parser.y"
 
 
 void

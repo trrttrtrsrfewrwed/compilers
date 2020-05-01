@@ -82,6 +82,7 @@
         RPAREN ")"
         LSQUARE "["
         RSQUARE "]"
+        COMMA ","
 ;
 
 %token <std::string> IDENTIFIER "identifier"
@@ -185,7 +186,9 @@ following_exprs:
 
 lvalue:
 	"identifier" { $$ = new SimpleLvalue($1); }
-	 | "identifier" "[" expr "]" { $$ = new ArrayLvalue($1, $3); };
+	 | "identifier" "[" expr "]" {
+	 $$ = new ArrayLvalue($1, $3);
+	  };
 
 expr:	expr binary_operator expr  {
 		$$ = new BinaryExpression($1, $3, $2);

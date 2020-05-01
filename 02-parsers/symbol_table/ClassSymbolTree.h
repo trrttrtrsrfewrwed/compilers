@@ -16,17 +16,17 @@ public:
    * @param name - name of layer - method name
    * @param layer - scope layer to use
    */
-  void AddMapping(Symbol name, ScopeLayer * layer);
-
+  void AddMapping(Symbol name, ScopeLayer * layer, MethodDeclaration* decl);
   /**
    * Get function by name
    * @param name
    * @return Function scope
    */
   ScopeLayer * GetMethodScopeByName(Symbol name);
+  MethodDeclaration * GetMethodBodyByName(Symbol name);
 
   void PrintTree(std::ofstream& ofstream);
 private:
   std::unordered_map<Symbol, ScopeLayer *> layer_mapping_;
-
+  std::unordered_map<Symbol, MethodDeclaration *> method_bodies_;
 };

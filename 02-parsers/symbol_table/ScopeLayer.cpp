@@ -1,6 +1,6 @@
 #include "ScopeLayer.h"
-#include <objects/MethodType.h>
-#include <objects/PrimitiveType.h>
+#include <object_types/MethodType.h>
+#include <object_types/PrimitiveType.h>
 
 ScopeLayer::ScopeLayer(ScopeLayer * parent): parent_(parent) {
   parent_->AddChild(this);
