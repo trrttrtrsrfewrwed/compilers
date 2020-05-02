@@ -18,4 +18,5 @@ public:
   std::vector<std::string> field_names_;
   std::string class_name_;
   bool is_array_;
+  bool IsArray() override;
 };

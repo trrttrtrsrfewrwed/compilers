@@ -8,4 +8,5 @@ public:
   virtual std::string GetTypeName();
   virtual ~BasicType() = default;
   void PrintTabs(std::ofstream& ofstream, int num_tabs);
+  virtual bool IsArray() = 0;
 };

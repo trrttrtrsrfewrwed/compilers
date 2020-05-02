@@ -15,5 +15,6 @@ public:
   std::string GetTypeName() override;
   TYPE type_;
   bool is_array_;
+  bool IsArray() override;
 };
 

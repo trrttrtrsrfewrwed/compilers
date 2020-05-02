@@ -1,5 +1,6 @@
 #include "Object.h"
 
+#include "Array.h"
 #include "BasicObject.h"
 #include <iostream>
 #include <object_types/ObjectType.h>
@@ -9,8 +10,13 @@ Object::Object(BasicType *type) : type_(type) {
     auto obj_type = dynamic_cast<ObjectType *>(type);
     for (size_t i = 0; i < obj_type->field_names_.size(); ++i) {
       if (obj_type->field_types_[i]->GetType() != "MethodType") {
+        if (obj_type->field_types_[i]->IsArray()) {
+          field_values_[Symbol(obj_type->field_names_[i])] =
+              new Array(obj_type->field_types_[i]);
+        } else {
         field_values_[Symbol(obj_type->field_names_[i])] =
             new Object(obj_type->field_types_[i]);
+        }
       }
     }
   }

@@ -4,10 +4,9 @@
 
 #include "ObjectType.h"
 
-ObjectType::ObjectType(ClassType* type, bool is_array)
+ObjectType::ObjectType(ClassType *type, bool is_array)
     : is_array_(is_array), field_names_(type->field_names_),
-      field_types_(type->field_types_),
-      class_name_(type->class_name_) {}
+      field_types_(type->field_types_), class_name_(type->class_name_) {}
 
 void ObjectType::Print(std::ofstream &ofstream, int num_tabs) {
   PrintTabs(ofstream, num_tabs);
@@ -28,3 +27,4 @@ void ObjectType::Print(std::ofstream &ofstream, int num_tabs) {
 }
 std::string ObjectType::GetType() { return "ObjectType"; }
 std::string ObjectType::GetTypeName() { return class_name_; }
+bool ObjectType::IsArray() { return is_array_; }

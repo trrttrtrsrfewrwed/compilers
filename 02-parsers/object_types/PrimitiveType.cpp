@@ -29,3 +29,4 @@ std::string PrimitiveType::GetTypeName() {
     return "Boolean";
   }
 }
+bool PrimitiveType::IsArray() { return is_array_; }

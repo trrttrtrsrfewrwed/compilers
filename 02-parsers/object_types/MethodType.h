@@ -12,4 +12,5 @@ public:
   std::vector<BasicType*> argument_types_;
   std::vector<std::string> argument_names_;
   BasicType* return_type_;
+  bool IsArray() override;
 };

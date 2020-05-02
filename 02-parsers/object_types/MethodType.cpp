@@ -27,3 +27,6 @@ void MethodType::Print(std::ofstream &ofstream, int num_tabs) {
   return_type_->Print(ofstream, num_tabs + 1);
 }
 std::string MethodType::GetType() { return "MethodType"; }
+bool MethodType::IsArray() {
+  throw std::runtime_error("trying to ask IsArray from MethodType");
+}
