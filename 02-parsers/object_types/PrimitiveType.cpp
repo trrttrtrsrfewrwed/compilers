@@ -30,3 +30,7 @@ std::string PrimitiveType::GetTypeName() {
   }
 }
 bool PrimitiveType::IsArray() { return is_array_; }
+size_t PrimitiveType::GetSize() {
+  // TODO (@trrttrtrsrfewrwed) change 4 to word size
+  return 4;
+}

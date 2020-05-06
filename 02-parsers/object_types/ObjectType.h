@@ -19,4 +19,5 @@ public:
   std::string class_name_;
   bool is_array_;
   bool IsArray() override;
+  size_t GetSize() override;
 };

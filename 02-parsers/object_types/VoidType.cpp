@@ -9,3 +9,6 @@ std::string VoidType::GetType() { return "VoidType"; }
 bool VoidType::IsArray() {
   throw std::runtime_error("Trying to ask IsArray from VoidType");
 }
+size_t VoidType::GetSize() {
+  throw std::runtime_error("Trying to ask size from void");
+}

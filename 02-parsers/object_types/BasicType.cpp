@@ -14,3 +14,6 @@ std::string BasicType::GetType() { return "BasicType"; }
 std::string BasicType::GetTypeName() {
   throw std::runtime_error("trying to get unrecognized type name\n");
 }
+size_t BasicType::GetSize() {
+  throw std::runtime_error("trying to get unrecognized type size\n");
+}

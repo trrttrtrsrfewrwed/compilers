@@ -30,3 +30,4 @@ std::string MethodType::GetType() { return "MethodType"; }
 bool MethodType::IsArray() {
   throw std::runtime_error("trying to ask IsArray from MethodType");
 }
+size_t MethodType::GetSize() { return 0; }

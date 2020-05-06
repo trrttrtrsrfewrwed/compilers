@@ -64,6 +64,7 @@ public:
 
 private:
   friend class MethodCallVisitor;
+  friend class IrtreeBuildVisitor;
   friend class Driver;
   std::unordered_map<Symbol, ClassSymbolTree*> classes_symbol_trees_;
   std::unordered_map<Symbol, ClassType*> classes_;

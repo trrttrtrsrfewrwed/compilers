@@ -28,3 +28,10 @@ void ObjectType::Print(std::ofstream &ofstream, int num_tabs) {
 std::string ObjectType::GetType() { return "ObjectType"; }
 std::string ObjectType::GetTypeName() { return class_name_; }
 bool ObjectType::IsArray() { return is_array_; }
+size_t ObjectType::GetSize() {
+  size_t answer = 0;
+  for (auto type: field_types_) {
+    answer += type->GetSize();
+  }
+  return answer;
+}

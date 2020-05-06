@@ -75,8 +75,13 @@ add_executable(
         visitors/Visitor.h
         grammar/declarations/CommonDeclaration.cpp
         visitors/PrintVisitor.cpp
-        visitors/PrintVisitor.h symbol_table/ScopeLayer.cpp symbol_table/ScopeLayer.h symbol_table/Symbol.cpp symbol_table/Symbol.h object_types/BasicType.cpp object_types/BasicType.h object_types/PrimitiveType.cpp object_types/PrimitiveType.h object_types/UninitObject.cpp object_types/UninitObject.h visitors/TemplateVisitor.cpp visitors/TemplateVisitor.h visitors/SymbolTreeVisitor.cpp visitors/SymbolTreeVisitor.h symbol_table/ClassSymbolTree.cpp symbol_table/ClassSymbolTree.h object_types/ObjectType.cpp object_types/ObjectType.h object_types/MethodType.cpp object_types/MethodType.h object_types/ClassType.cpp object_types/ClassType.h object_types/VoidType.cpp object_types/VoidType.h function_mechanisms/FrameEmulator.cpp function_mechanisms/FrameEmulator.h function_mechanisms/FunctionTable.cpp function_mechanisms/FunctionTable.h objects/BasicObject.cpp objects/BasicObject.h visitors/MethodCallVisitor.cpp visitors/MethodCallVisitor.h objects/Object.cpp objects/Object.h objects/Array.cpp objects/Array.h)
+        visitors/PrintVisitor.h symbol_table/ScopeLayer.cpp symbol_table/ScopeLayer.h symbol_table/Symbol.cpp symbol_table/Symbol.h object_types/BasicType.cpp object_types/BasicType.h object_types/PrimitiveType.cpp object_types/PrimitiveType.h object_types/UninitObject.cpp object_types/UninitObject.h visitors/TemplateVisitor.cpp visitors/TemplateVisitor.h visitors/SymbolTreeVisitor.cpp visitors/SymbolTreeVisitor.h symbol_table/ClassSymbolTree.cpp symbol_table/ClassSymbolTree.h object_types/ObjectType.cpp object_types/ObjectType.h object_types/MethodType.cpp object_types/MethodType.h object_types/ClassType.cpp object_types/ClassType.h object_types/VoidType.cpp object_types/VoidType.h function_mechanisms/FrameEmulator.cpp function_mechanisms/FrameEmulator.h function_mechanisms/FunctionTable.cpp function_mechanisms/FunctionTable.h objects/BasicObject.cpp objects/BasicObject.h visitors/MethodCallVisitor.cpp visitors/MethodCallVisitor.h objects/Object.cpp objects/Object.h objects/Array.cpp objects/Array.h function_mechanisms/FrameTranslator.cpp function_mechanisms/FrameTranslator.cpp function_mechanisms/FrameTranslator.h
+        function_mechanisms/address/Address.h function_mechanisms/address/AddressInFrame.h function_mechanisms/address/AddressInFrame.cpp function_mechanisms/address/AddressInRegister.h function_mechanisms/address/AddressInRegister.cpp visitors/IrtreeBuildVisitor.cpp visitors/IrtreeBuildVisitor.h function_mechanisms/struct_initialization/StructInitialization.h)
 target_include_directories(ParserExample PRIVATE ${ParserExample_SOURCE_DIR})
 
+set(IR_LIB "${PROJECT_NAME}IrLib")
 
+add_subdirectory(irtree)
+
+target_link_libraries(${CURRENT_EXECUTABLE} ${IR_LIB})
 
