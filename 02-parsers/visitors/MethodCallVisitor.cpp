@@ -347,7 +347,7 @@ void MethodCallVisitor::Visit(IfStatement *visited) {
     offsets_.pop();
     size_t index = offsets_.top();
     offsets_.pop();
-    offsets_.push(index + 2); // skip else child
+    offsets_.push(index + 1);
     current_layer_ = current_layer_->GetParent();
     frame.DeallocScope();
     table_.EndScope();

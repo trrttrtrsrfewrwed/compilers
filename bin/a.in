@@ -1,27 +1,20 @@
 class Factorial {
   public static void main () {
-    int[] a;
-    int[] b;
-    b = new int[3];
-    b[0] = 1;
-    b[1] = 2;
-    b[2] = 3;
-    a = b;
+    Fac fac;
+    new Fac().GetLol().SetKek();
+  }
+}
 
-    Fac c;
-    c.GG();
-    c.ComputeFac(a[1]);
-    System.out.println(a[1]);
-    System.out.println(b[1]);
-
-    c.ChangeArray(a);
-    System.out.println(a[0]);
-    System.out.println(a[1]);
-    System.out.println(a[2]);
-
-    System.out.println(b[0]);
-    System.out.println(b[1]);
-    System.out.println(b[2]);
+class Lol {
+  int kek;
+  public void SetKek() {
+    kek = 0;
+    int tmp;
+    tmp = this.GetKek() + 1;
+    kek = tmp;
+  }
+  public int GetKek() {
+    return kek;
   }
 }
 
@@ -31,6 +24,12 @@ class Fac {
     arr[0] = 8;
     arr[1] = 9;
     arr[2] = 10;
+  }
+
+  public Lol GetLol() {
+    Lol lol;
+    lol = new Lol();
+    return lol;
   }
 
   public int ComputeFac (int num) {
@@ -44,7 +43,11 @@ class Fac {
     num = 77;
     return num_aux;
   }
-  public void GG () {
-    cnt = 0;
+
+  public void GG (int num) {
+    if (1 == 0)
+      cnt = 1;
+    else
+      cnt = num * this.ComputeFac(num-1);
   }
 }

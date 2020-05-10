@@ -5,10 +5,14 @@
 #include "FrameTranslator.h"
 #include <function_mechanisms/address/AddressInFrame.h>
 #include <function_mechanisms/address/AddressInRegister.h>
+#include <irtree/types/BinaryOperatorType.h>
+#include <irtree/nodes/expressions/ConstExpression.h>
+#include <irtree/nodes/expressions/BinopExpression.h>
+#include <irtree/nodes/expressions/MemExpression.h>
 
 namespace IRT {
-FrameTranslator::FrameTranslator(const std::string &function_name)
-    : function_name_(function_name) {
+FrameTranslator::FrameTranslator(const std::string &function_name, ClassType* class_type)
+    : function_name_(function_name), class_type_(class_type) {
 
   addresses_[frame_pointer_address_].push(new AddressInRegister(
       Temporary(frame_pointer_address_)
@@ -65,18 +69,46 @@ void FrameTranslator::AddVariable(const std::string &name) {
   );
 }
 
-Address *FrameTranslator::GetAddress(const std::string &name) {
-  // TODO (добавить обработку полей для this)
+Expression *FrameTranslator::GetField(const std::string &name) {
+  IRT::Expression* this_pointer = addresses_["this"].top()->ToExpression();
+
+  IRT::Expression* field_pointer = nullptr;
+
+  size_t offset = 0;
+  bool flg = false;
+  for (size_t i = 0; i < class_type_->field_names_.size(); ++i) {
+    if (class_type_->field_names_[i] == name) {
+      flg  = true;
+      break;
+    }
+    offset += class_type_->field_types_[i]->GetSize();
+  }
+  if (flg) {
+    field_pointer = new IRT::MemExpression(
+        new IRT::BinopExpression(IRT::BinaryOperatorType::PLUS,
+                             this_pointer,
+                             new IRT::ConstExpression(offset)));
+  } else {
+    throw std::runtime_error("trying to get non existing field");
+  }
+  return field_pointer;
+}
+
+IRT::Expression *FrameTranslator::GetAddress(const std::string &name) {
   // this будет храниться в виде IRT::Address* в addresses_["this"]
   // Важно! В случае, если переменная не примитивного типа, GetAdress()->ToExpression()
   // вернёт указатель на переменную (её адрес в памяти), иначе - значение
-  return addresses_[name].top();
+  if (addresses_[name].empty()) {
+    return GetField(name);
+  }
+
+  return addresses_[name].top()->ToExpression();
 }
 void FrameTranslator::AddReturnAddress() {
   AddVariable(return_address_);
 }
 
-Address *FrameTranslator::GetReturnValueAddress() {
+IRT::Expression *FrameTranslator::GetReturnValueAddress() {
   return  GetAddress(return_value_address_);
 }
 void FrameTranslator::AddLocalArray(std::string& name) {

@@ -1,6 +1,8 @@
 #include "driver.hh"
 #include "parser.hh"
+#include <irtree/visitors/PrintVisitor.h>
 #include <object_types/VoidType.h>
+#include <visitors/IrtreeBuildVisitor.h>
 #include <visitors/MethodCallVisitor.h>
 #include <visitors/PrintVisitor.h>
 #include <visitors/SymbolTreeVisitor.h>
@@ -52,6 +54,18 @@ int Driver::Evaluate() {
                                  new MethodType(arguments, new VoidType()));
   main_visitor.SetSymbolTreeVisitor(&visitor);
   main_visitor.Visit(visitor.GetMainClass());
+
+  IrtreeBuildVisitor irt_build_visitor;
+  irt_build_visitor.SetSymbolTreeVisitor(&visitor);
+
+  irt_build_visitor.Visit(program);
+
+  IrtMapping methods = irt_build_visitor.GetTrees();
+
+  for (auto func_view = methods.begin(); func_view != methods.end(); ++func_view) {
+    IRT::PrintVisitor print_visitor_irt(func_view->first + "_irt.txt");
+    methods[func_view->first]->Accept(&print_visitor_irt);
+  }
   return 0;
 }
 

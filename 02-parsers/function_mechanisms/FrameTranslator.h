@@ -7,6 +7,7 @@
 
 #include <function_mechanisms/address/Address.h>
 #include <object_types/BasicType.h>
+#include <object_types/ClassType.h>
 #include <stack>
 #include <string>
 #include <unordered_map>
@@ -14,7 +15,7 @@
 namespace IRT {
 class FrameTranslator {
 public:
-  FrameTranslator(const std::string& function_name);
+  FrameTranslator(const std::string& function_name, ClassType* class_type);
   void SetupScope();
   void TearDownScope();
 
@@ -27,12 +28,13 @@ public:
   void AddArgumentAddress(const std::string& name);
 
   Address* FramePointer();
-  Address* GetAddress(const std::string& name);
-  Address* GetReturnValueAddress();
+  IRT::Expression* GetAddress(const std::string& name);
+  IRT::Expression* GetReturnValueAddress();
 
   void AddLocalArray(std::string& name);
 
 private:
+  ClassType* class_type_;
   std::string return_address_ = "::return";
   std::string frame_pointer_address_ = "::fp";
   std::string return_value_address_ = "::return_value";
@@ -45,6 +47,7 @@ private:
 
   int GetOffset();
   int max_offset_ = 0;
+  Expression *GetField(const std::string &name);
 };
 
 }
