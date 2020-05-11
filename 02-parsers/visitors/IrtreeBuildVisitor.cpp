@@ -96,21 +96,21 @@ void IrtreeBuildVisitor::Visit(MethodDeclaration *visited) {
   } else {
     basic_type = GetBasicType(visited->return_type_);
   }
-  IRT::Statement *return_value_init = nullptr;
+  /*IRT::Statement *return_value_init = nullptr;
   if (basic_type->GetType() == "ObjectType") {
     auto expr = current_frame_->GetAddress("::return_value");
 
     IRT::Expression *value = CreateStruct(GetBasicType(visited->return_type_));
     return_value_init = new IRT::MoveStatement(expr, value);
-  }
+  }*/
 
   auto statements_ir = Accept(visited->method_body_);
 
   IRT::Statement *func_start =
       new IRT::LabelStatement(IRT::Label(full_method_name));
-  if (return_value_init) {
+  /*if (return_value_init) {
     func_start = new IRT::SeqStatement(func_start, return_value_init);
-  }
+  }*/
 
   if (statements_ir) {
 
@@ -345,8 +345,11 @@ void IrtreeBuildVisitor::Visit(Program *visited) {
 }
 
 void IrtreeBuildVisitor::Visit(AssertStatement *visited) {
-  std::cout << "in assert statement\n";
-  tos_value_ = nullptr;
+  auto* irt_expressions = new IRT::ExpressionList();
+  irt_expressions->Add(Accept(visited->expr_)->ToExpression());
+  tos_value_ = new IRT::ExpressionWrapper(new IRT::CallExpression(
+      new IRT::NameExpression(IRT::Label("assert")),
+      irt_expressions));;
 }
 
 void IrtreeBuildVisitor::Visit(DefinitionStatement *visited) {
@@ -518,7 +521,11 @@ void IrtreeBuildVisitor::Visit(ScopeStatement *visited) {
 }
 
 void IrtreeBuildVisitor::Visit(SoutStatement *visited) {
-  tos_value_ = nullptr;
+  auto* irt_expressions = new IRT::ExpressionList();
+  irt_expressions->Add(Accept(visited->expr_)->ToExpression());
+  tos_value_ = new IRT::ExpressionWrapper(new IRT::CallExpression(
+      new IRT::NameExpression(IRT::Label("print")),
+      irt_expressions));
 }
 
 void IrtreeBuildVisitor::Visit(Statement *visited) {
