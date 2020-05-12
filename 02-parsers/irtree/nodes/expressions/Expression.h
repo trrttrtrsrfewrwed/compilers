@@ -5,7 +5,10 @@
 namespace IRT {
 
 class Expression : public BaseElement {
- public:
+public:
   virtual ~Expression() = default;
+  virtual bool IsESEQ() { return false; }
+  virtual bool IsCONST() { return false; }
+  virtual bool IsNAME() { return false; }
 };
-}
+} // namespace IRT

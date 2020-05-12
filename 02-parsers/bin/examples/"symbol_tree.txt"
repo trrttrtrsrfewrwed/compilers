@@ -1,0 +1,65 @@
+Class: Factorial
+---------Info-----------
+ClassType: 
+  fields
+	0. main
+	MethodType: 
+	  args
+	  returns
+		VoidType 
+-------Info-end---------
+Printing tree: 
+layer {
+name: a
+PrimitiveType: 
+  Integer
+  simple
+
+}
+Class: Example
+---------Info-----------
+ClassType: 
+  fields
+	0. param
+	PrimitiveType: 
+	  Integer
+	  simple
+	1. SimpleFoo
+	MethodType: 
+	  args
+	  returns
+		PrimitiveType: 
+		  Integer
+		  simple
+	2. DoubleCallExample
+	MethodType: 
+	  args
+	  returns
+		VoidType 
+-------Info-end---------
+Printing tree: 
+layer {
+name: DoubleCallExample
+MethodType: 
+  args
+  returns
+	VoidType 
+
+name: param
+PrimitiveType: 
+  Integer
+  simple
+
+name: SimpleFoo
+MethodType: 
+  args
+  returns
+	PrimitiveType: 
+	  Integer
+	  simple
+
+}
+	layer {
+	}
+	layer {
+	}

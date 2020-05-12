@@ -8,6 +8,7 @@
 namespace IRT {
 class SeqStatement : public Statement {
  public:
+  virtual bool IsSEQ() override;
   SeqStatement(Statement* first, Statement* second);
   void Accept(Visitor *visitor) override;
   Statement* first_statement_;

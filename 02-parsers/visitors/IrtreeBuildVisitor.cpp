@@ -534,6 +534,7 @@ void IrtreeBuildVisitor::Visit(Statement *visited) {
 
 void IrtreeBuildVisitor::Visit(StatementList *visited) {
   if (visited->statements_.empty()) {
+    std::cout << "LOL\n";
     tos_value_ = nullptr;
     return;
   }

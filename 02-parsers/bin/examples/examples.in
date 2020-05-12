@@ -1,0 +1,17 @@
+class Factorial {
+  public static void main () {
+    int a;
+    a = 0;
+  }
+}
+
+class Example {
+  int param;
+  public int SimpleFoo() {
+    return 1;
+  }
+  public void DoubleCallExample() {
+    param = this.SimpleFoo() + this.SimpleFoo();
+  }
+
+}

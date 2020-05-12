@@ -20,6 +20,8 @@ FLEX_TARGET(
 
 ADD_FLEX_BISON_DEPENDENCY(MyScanner MyParser)
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY bin/examples)
+
 add_executable(
     ParserExample
     main.cpp
