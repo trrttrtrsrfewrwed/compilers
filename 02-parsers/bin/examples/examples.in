@@ -14,4 +14,18 @@ class Example {
     param = this.SimpleFoo() + this.SimpleFoo();
   }
 
+  public void EseqExample() {
+    int[] a;
+    int b;
+    int c;
+    a = new int[3];
+  }
+
+  public void LeftSeqExample() {
+    int a;
+    a = 1;
+    if (a > 0)
+        if (a == 1)
+            System.out.println(1);
+  }
 }

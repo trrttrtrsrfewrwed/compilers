@@ -1,0 +1,19 @@
+SeqStatement:
+	LabelStatement: Example::DoubleCallExample
+	MoveStatement:
+		MemExpression: 
+			BinopExpression: PLUS
+				MemExpression: 
+					TempExpression: ::fp
+				ConstExpression 0
+		BinopExpression: PLUS
+			CallExpression: 
+				NameExpression: Example::SimpleFoo
+				ExpressionList: 
+					MemExpression: 
+						TempExpression: ::fp
+			CallExpression: 
+				NameExpression: Example::SimpleFoo
+				ExpressionList: 
+					MemExpression: 
+						TempExpression: ::fp

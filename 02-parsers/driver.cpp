@@ -1,6 +1,8 @@
 #include "driver.hh"
 #include "parser.hh"
 #include <irtree/visitors/DoubleCallEliminateVisitor.h>
+#include <irtree/visitors/EseqLiftVisitor.h>
+#include <irtree/visitors/LinearizationVisitor.h>
 #include <irtree/visitors/PrintVisitor.h>
 #include <object_types/VoidType.h>
 #include <visitors/IrtreeBuildVisitor.h>
@@ -75,6 +77,25 @@ int Driver::Evaluate() {
     IRT::PrintVisitor print_visitor_two(func_view->first + "_without_double_call.txt");
     stmt_result->Accept(&print_visitor_two);
 
+    IRT::EseqLiftVisitor eseq_lift_visitor;
+    methods[func_view->first]->Accept(&eseq_lift_visitor);
+
+    stmt_result = eseq_lift_visitor.GetTree();
+
+    IRT::PrintVisitor print_visitor_three(func_view->first + "_with_lifted_eseq.txt");
+    stmt_result->Accept(&print_visitor_three);
+
+    IRT::LinearizationVisitor linearization_visitor;
+    methods[func_view->first]->Accept(&linearization_visitor);
+
+    for (size_t i = 0; i < 4; ++i) {
+      stmt_result = linearization_visitor.GetTree();
+
+      stmt_result->Accept(&linearization_visitor);
+    }
+
+    IRT::PrintVisitor print_visitor_four(func_view->first + "_with_seq_right_order.txt");
+    stmt_result->Accept(&print_visitor_four);
   }
   return 0;
 }

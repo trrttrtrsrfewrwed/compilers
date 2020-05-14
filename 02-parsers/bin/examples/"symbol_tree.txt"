@@ -36,9 +36,31 @@ ClassType:
 	  args
 	  returns
 		VoidType 
+	3. EseqExample
+	MethodType: 
+	  args
+	  returns
+		VoidType 
+	4. LeftSeqExample
+	MethodType: 
+	  args
+	  returns
+		VoidType 
 -------Info-end---------
 Printing tree: 
 layer {
+name: EseqExample
+MethodType: 
+  args
+  returns
+	VoidType 
+
+name: LeftSeqExample
+MethodType: 
+  args
+  returns
+	VoidType 
+
 name: DoubleCallExample
 MethodType: 
   args
@@ -63,3 +85,31 @@ MethodType:
 	}
 	layer {
 	}
+	layer {
+	name: c
+	PrimitiveType: 
+	  Integer
+	  simple
+
+	name: a
+	PrimitiveType: 
+	  Integer
+	  array
+
+	name: b
+	PrimitiveType: 
+	  Integer
+	  simple
+
+	}
+	layer {
+	name: a
+	PrimitiveType: 
+	  Integer
+	  simple
+
+	}
+		layer {
+		}
+			layer {
+			}

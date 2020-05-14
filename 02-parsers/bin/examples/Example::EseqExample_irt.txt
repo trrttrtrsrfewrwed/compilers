@@ -1,0 +1,24 @@
+SeqStatement:
+	LabelStatement: Example::EseqExample
+	MoveStatement:
+		MemExpression: 
+			BinopExpression: PLUS
+				TempExpression: ::fp
+				ConstExpression 8
+		EseqExpression:
+			SeqStatement:
+				MoveStatement:
+					TempExpression: %0
+					CallExpression: 
+						NameExpression: malloc
+						ExpressionList: 
+							BinopExpression: MUL
+								ConstExpression 4
+								BinopExpression: PLUS
+									ConstExpression 3
+									ConstExpression 1
+				MoveStatement:
+					MemExpression: 
+						TempExpression: %0
+					ConstExpression 3
+			TempExpression: %0

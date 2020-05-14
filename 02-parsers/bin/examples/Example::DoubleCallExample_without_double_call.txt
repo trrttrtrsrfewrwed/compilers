@@ -9,19 +9,19 @@ SeqStatement:
 		BinopExpression: PLUS
 			EseqExpression:
 				MoveStatement:
-					TempExpression: %0
+					TempExpression: %3
 					CallExpression: 
 						NameExpression: Example::SimpleFoo
 						ExpressionList: 
 							MemExpression: 
 								TempExpression: ::fp
-				TempExpression: %0
+				TempExpression: %3
 			EseqExpression:
 				MoveStatement:
-					TempExpression: %1
+					TempExpression: %4
 					CallExpression: 
 						NameExpression: Example::SimpleFoo
 						ExpressionList: 
 							MemExpression: 
 								TempExpression: ::fp
-				TempExpression: %1
+				TempExpression: %4

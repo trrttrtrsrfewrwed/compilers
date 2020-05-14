@@ -202,10 +202,14 @@ void IRT::EseqLiftVisitor::Visit(IRT::CallExpression *call_expression) {
     }
     auto new_expr_list = new ExpressionList();
     for (size_t i = 0; i < expression_list->expressions_.size(); ++i) {
-      if (temps[i].ToString() != "empty") {
-        new_expr_list->Add(new TempExpression(temps[i]));
+      if (i == first_eseq) {
+        new_expr_list->Add(eseq_leaf->expression_);
       } else {
-        new_expr_list->Add(expression_list->expressions_[i]);
+        if (temps[i].ToString() != "empty") {
+          new_expr_list->Add(new TempExpression(temps[i]));
+        } else {
+          new_expr_list->Add(expression_list->expressions_[i]);
+        }
       }
     }
     tos_value_.expression_ = new EseqExpression(
